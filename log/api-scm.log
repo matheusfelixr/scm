@@ -960,3 +960,1275 @@
 2021-03-12 12:46:11.346  INFO 14772 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : Pet Shop Dona Joaninha
 2021-03-12 12:46:11.409  INFO 14772 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : (34) 99155-9489
 2021-03-12 12:46:11.410  INFO 14772 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : Rua Pedro Faleiros De Aguiar, 580 - Santa rita, Monte Carmelo - MG, 38500-000
+2021-03-12 13:39:09.987  INFO 1332 --- [main] com.matheusfelixr.scm.ScmApplication     : Starting ScmApplication using Java 1.8.0_191 on DESKTOP-83GQDVO with PID 1332 (D:\projetos\estudo\git\scm\target\classes started by mathe in D:\projetos\estudo\git\scm)
+2021-03-12 13:39:09.992  INFO 1332 --- [main] com.matheusfelixr.scm.ScmApplication     : The following profiles are active: @activatedProperties@
+2021-03-12 13:39:11.090  INFO 1332 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-03-12 13:39:11.171  INFO 1332 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 70 ms. Found 3 JPA repository interfaces.
+2021-03-12 13:39:11.585  INFO 1332 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@1a3e8e24' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-12 13:39:11.591  INFO 1332 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-12 13:39:12.503  INFO 1332 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-03-12 13:39:12.525  INFO 1332 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-03-12 13:39:12.526  INFO 1332 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-12 13:39:12.670  INFO 1332 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-03-12 13:39:12.670  INFO 1332 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2596 ms
+2021-03-12 13:39:13.079  INFO 1332 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-03-12 13:39:13.248  INFO 1332 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.28.Final
+2021-03-12 13:39:13.446  INFO 1332 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-03-12 13:39:13.595  INFO 1332 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-03-12 13:39:13.729  INFO 1332 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-03-12 13:39:13.749  INFO 1332 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2021-03-12 13:39:15.224  INFO 1332 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-03-12 13:39:15.235  INFO 1332 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-03-12 13:39:15.831  WARN 1332 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-03-12 13:39:16.653  INFO 1332 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4be5b9b1, org.springframework.security.web.context.SecurityContextPersistenceFilter@3fe11091, org.springframework.security.web.header.HeaderWriterFilter@49ea4b65, org.springframework.security.web.authentication.logout.LogoutFilter@7d65c0ac, com.matheusfelixr.scm.filter.JwtRequestFilter@50a095cb, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@66b3eab0, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@734a2c17, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2ad80cf6, com.matheusfelixr.scm.filter.CorsFilter@4e212f46, org.springframework.security.web.session.SessionManagementFilter@2cf669f2, org.springframework.security.web.access.ExceptionTranslationFilter@6d5d1204, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7ddcd3d]
+2021-03-12 13:39:16.692  INFO 1332 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-03-12 13:39:17.820  INFO 1332 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-12 13:39:18.027  INFO 1332 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-03-12 13:39:18.029  INFO 1332 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-03-12 13:39:18.052  INFO 1332 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2021-03-12 13:39:18.098  INFO 1332 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-03-12 13:39:18.312  INFO 1332 --- [main] com.matheusfelixr.scm.ScmApplication     : Started ScmApplication in 8.916 seconds (JVM running for 9.503)
+2021-03-12 13:39:34.160  INFO 1332 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-03-12 13:39:34.160  INFO 1332 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-03-12 13:39:34.161  INFO 1332 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-03-12 13:40:43.692  INFO 1332 --- [http-nio-8080-exec-10] c.m.s.c.CaptureMailingController         : Inicio processo de captura de mailing para o exemplo: Empresas tupaciguara
+2021-03-12 13:40:45.151  INFO 1332 --- [Forwarding newSession on session null to remote] o.o.selenium.remote.ProtocolHandshake    : Detected dialect: W3C
+2021-03-12 13:41:00.117  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : 
+Tuplast Indústria e Comércio de Derivados de Pvc e Plástico
+2021-03-12 13:41:00.191  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : (34) 3281-1550
+2021-03-12 13:41:00.192  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : Av. Juracy Ribeiro Machado, 59 - Morada Nova, Tupaciguara - MG, 38430-000
+2021-03-12 13:41:01.349  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : 
+Rodocouto Transportes
+2021-03-12 13:41:01.413  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : (34) 3281-5388
+2021-03-12 13:41:01.413  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : R. Bueno Brandão, 561 - São Cristóvão, Tupaciguara - MG, 38430-000
+2021-03-12 13:41:02.577  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : 
+Martins e Correia Produtos de Limpeza e Descartáveis em geral
+2021-03-12 13:41:02.643  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : (34) 3281-2440
+2021-03-12 13:41:02.643  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : R. Bueno Brandão, 115 - Centro, Tupaciguara - MG, 38430-000
+2021-03-12 13:41:03.764  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : 
+Start Shop Tupaciguara
+2021-03-12 13:41:03.817  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : (34) 3281-2080
+2021-03-12 13:41:03.818  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : R. Bueno Brandão, 304 - Loja 4 - São Cristóvão, Tupaciguara - MG, 38480-000
+2021-03-12 13:41:04.996  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : 
+Marmoraria Tupaciguara
+2021-03-12 13:41:05.061  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : (34) 3281-4727
+2021-03-12 13:41:05.062  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : Av. Adilon de Araújo, 103 - Tiradentes, Tupaciguara - MG, 38430-000
+2021-03-12 13:41:06.277  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : 
+Souza
+2021-03-12 13:41:06.424  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : (34) 99660-5350
+2021-03-12 13:41:06.424  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : R. Potier Monteiro, 78 - Brasil, Tupaciguara - MG, 38480-000
+2021-03-12 13:41:07.570  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : 
+Lista Mais Comercial
+2021-03-12 13:41:07.620  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : (34) 3281-5787
+2021-03-12 13:41:07.620  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : Jet Cartuchos - R. Bueno Brandão, 319 - Ap B - São Cristóvão, Tupaciguara - MG, 38480-000
+2021-03-12 13:41:08.741  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : 
+Luiz táxi em tupaciguara
+2021-03-12 13:41:08.825  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : (34) 99635-8632
+2021-03-12 13:41:08.826  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : R. Laérte Araújo, 173 - Tiradentes, Tupaciguara - MG, 38430-000
+2021-03-12 13:41:09.985  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : 
+TransCustódio
+2021-03-12 13:41:10.032  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : R. Aroeira - Jardim do Lago, Tupaciguara - MG, 38430-000
+2021-03-12 13:41:11.161  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : 
+MedGeo Agrimensura
+2021-03-12 13:41:11.231  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : (34) 3281-3901
+2021-03-12 13:41:11.231  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : R. Bueno Brandão, 157 - Brasil, Tupaciguara - MG, 38430-000
+2021-03-12 13:41:12.377  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : 
+Associação Comercial, Industrial, Agropecuária e Prestação de Serviços de Tupaciguara
+2021-03-12 13:41:12.424  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : (34) 3281-4002
+2021-03-12 13:41:12.425  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : R. Bueno Brandão, 22 - 01 e 02 - Centro, Tupaciguara - MG, 38430-000
+2021-03-12 13:41:13.592  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : 
+Auto Peças Tupaciguara
+2021-03-12 13:41:13.646  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : (34) 3281-3150
+2021-03-12 13:41:13.646  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : R. Bueno Brandão, 425 - São Cristóvão, Tupaciguara - MG, 38430-000
+2021-03-12 13:41:14.799  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : 
+HM REFRIGERAÇÃO
+2021-03-12 13:41:14.865  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : (34) 99640-0069
+2021-03-12 13:41:14.865  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : R. João Batista de Oliveira, 193 - Nova Esperança, Tupaciguara - MG, 38430-000
+2021-03-12 13:41:15.975  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : 
+Escritorio de Contabilidade
+2021-03-12 13:41:16.015  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : R. Teófilo Marquês, 12 - Centro, Tupaciguara - MG, 38430-000
+2021-03-12 13:41:17.134  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : 
+Ferragista Tupaciguara
+2021-03-12 13:41:17.193  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : 3281-6242
+2021-03-12 13:41:17.193  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : R. Getúlio Vargas, 332 - Primavera, Tupaciguara - MG, 38430-000
+2021-03-12 13:41:18.401  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : 
+Correios
+2021-03-12 13:41:18.460  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : (34) 3281-3687
+2021-03-12 13:41:18.460  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : R. Gov. Bias Fortes, 43 - Centro, Tupaciguara - MG, 38430-000
+2021-03-12 13:41:19.599  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : 
+Minas Goiás Agronegócios
+2021-03-12 13:41:19.667  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : (34) 3281-4955
+2021-03-12 13:41:19.668  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : R. Rodrigo do Valê, 316 - Primavera, Tupaciguara - MG, 38480-000
+2021-03-12 13:41:20.815  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : 
+Bito Materiais para Construção
+2021-03-12 13:41:20.873  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : (34) 3281-2383
+2021-03-12 13:41:20.874  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : Rua Delfim Moreira, 37 - Centro, Tupaciguara - MG, 38430-000
+2021-03-12 13:41:22.000  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : 
+Esquadrias Pereira Pires
+2021-03-12 13:41:22.053  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : (34) 3281-1727
+2021-03-12 13:41:22.054  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : R. José Ferreira Marquês, 76 - Brasil, Tupaciguara - MG, 38430-000
+2021-03-12 13:41:27.312  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : 
+
+2021-03-12 13:41:28.544  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : 
+Escritorio de Contabilidade do Dias
+2021-03-12 13:41:28.594  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : (34) 3281-2176
+2021-03-12 13:41:28.594  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : R. Bueno Brandão, 43 - Centro, Tupaciguara - MG, 38430-000
+2021-03-12 13:41:29.775  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : 
+WGO Telecom - Tupaciguara
+2021-03-12 13:41:29.871  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : (34) 3281-5570
+2021-03-12 13:41:29.872  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : R. Bueno Brandão, 193 - Centro, Tupaciguara - MG, 38430-000
+2021-03-12 13:41:30.995  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : 
+vazante agropecuaria ltda
+2021-03-12 13:41:31.062  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : (34) 3281-4170
+2021-03-12 13:41:31.062  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : R. Bueno Brandão, 438 - Das Paineiras, Tupaciguara - MG, 38430-000
+2021-03-12 13:41:32.261  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : 
+Empresa Gontijo de Transportes
+2021-03-12 13:41:32.329  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : (34) 3281-5151
+2021-03-12 13:41:32.330  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : R. Luís Gomes de Campos - Tiradentes, Tupaciguara - MG, 38430-000
+2021-03-12 13:41:33.495  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : 
+Vazante Agro Pecuária
+2021-03-12 13:41:33.540  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : (34) 3281-1874
+2021-03-12 13:41:33.540  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : Av. Adilon de Araújo, 132 - Tiradentes, Tupaciguara - MG, 38430-000
+2021-03-12 13:41:34.680  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : 
+Bar do Zé (Tupaciguara )
+2021-03-12 13:41:34.753  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : (34) 99671-4554
+2021-03-12 13:41:34.753  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : Av. Brasil, 176 A - Centro, Tupaciguara - MG, 38480-000
+2021-03-12 13:41:35.904  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : 
+Tarwhel Materiais Para Construção
+2021-03-12 13:41:35.964  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : (34) 3281-3026
+2021-03-12 13:41:35.965  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : R. Bueno Brandão, 301 - São Cristóvão, Tupaciguara - MG, 38430-000
+2021-03-12 13:41:37.090  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : 
+Abc-Indústria e Comércio S/A-Abc-Inco
+2021-03-12 13:41:37.154  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : (34) 3281-1506
+2021-03-12 13:41:37.154  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : Avenida Adilon Araújo - s/n qd 270BL t 270B, Tupaciguara - MG, 38430-000
+2021-03-12 13:41:38.272  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : 
+Jornal O Independente
+2021-03-12 13:41:38.331  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : (34) 3281-3940
+2021-03-12 13:41:38.332  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : R. José Primo de Azevedo, 309 - Nova Esperança, Tupaciguara - MG, 38430-000
+2021-03-12 13:41:39.458  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : 
+LSZ Materiais para Construção
+2021-03-12 13:41:39.526  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : (34) 3281-6600
+2021-03-12 13:41:39.526  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : Av. Modesto Alves Prudente, 241 - Tiradentes, Tupaciguara - MG, 38430-000
+2021-03-12 13:41:40.710  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : 
+Panificadora Tupaciguara
+2021-03-12 13:41:40.764  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : (34) 3281-2150
+2021-03-12 13:41:40.765  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : R. Cel. Joaquim Mendes, 26 - Centro, Tupaciguara - MG, 38430-000
+2021-03-12 13:41:41.880  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : 
+Companhia de Telecomunicações do Brasil Central
+2021-03-12 13:41:41.942  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : (34) 3281-5425
+2021-03-12 13:41:41.942  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : R. Bueno Brandão, 22 - Primavera, Tupaciguara - MG, 38430-000
+2021-03-12 13:41:43.061  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : 
+PV Construtora e Empreendimentos
+2021-03-12 13:41:43.119  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : (34) 99338-9686
+2021-03-12 13:41:43.120  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : R. Gabriel Felipe de Faria, 45 - Centro, Tupaciguara - MG, 38430-000
+2021-03-12 13:41:44.243  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : 
+Tupaciguara Prefeitura
+2021-03-12 13:41:44.302  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : 3281-0000
+2021-03-12 13:41:44.302  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : R. Bueno Brandão, 12 - Primavera, Tupaciguara - MG, 38430-000
+2021-03-12 13:41:45.447  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : 
+Sindicato dos Trabalhadores Rurais de Tupaciguara
+2021-03-12 13:41:45.505  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : (34) 3281-3222
+2021-03-12 13:41:45.505  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : Av. Domingos Lopes Valadão, 201 - Tiradentes, Tupaciguara - MG, 38430-000
+2021-03-12 13:41:46.639  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : 
+Empresa de Assist Técnica e Extensão Rural do Est de MG
+2021-03-12 13:41:46.706  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : (34) 3281-2375
+2021-03-12 13:41:46.707  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : R. Cel. Joaquim Mendes, 59 - Centro, Tupaciguara - MG, 38430-000
+2021-03-12 13:41:47.839  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : 
+Câmara Municipal de Tupaciguara
+2021-03-12 13:41:47.893  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : (34) 3281-5990
+2021-03-12 13:41:47.893  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : R. Olegário Maciel, 1 - Centro, Tupaciguara - MG, 38480-000
+2021-03-12 13:41:49.072  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : 
+Top Ferramentas
+2021-03-12 13:41:49.135  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : Av. Joaquim Bernardes de Novais, 116 - Nova Esperança, Tupaciguara - MG, 38480-000
+2021-03-12 13:41:50.271  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : 
+Drogaria Americana Tupaciguara
+2021-03-12 13:41:50.342  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : (34) 3281-1080
+2021-03-12 13:41:50.342  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : R. Bueno Brandão, 178 - São Cristóvão, Tupaciguara - MG, 38430-000
+2021-03-12 13:41:55.606  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : 
+
+2021-03-12 13:41:56.804  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : 
+Drogaria Arantes & Campos
+2021-03-12 13:41:56.883  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : (34) 3281-6096
+2021-03-12 13:41:56.884  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : R. José Ferreira Marquês, 18 - Centro, Tupaciguara - MG, 38430-000
+2021-03-12 13:41:58.012  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : 
+Speed Motoboys
+2021-03-12 13:41:58.087  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : (34) 99867-0230
+2021-03-12 13:41:58.087  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : Rua: João Nicolau da Silva, 32 - Tiradentes, Tupaciguara - MG, 38480-000
+2021-03-12 13:41:59.257  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : 
+CAMDA - Filial Tupaciguara
+2021-03-12 13:41:59.325  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : (34) 3281-6006
+2021-03-12 13:41:59.325  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : R. Bueno Brandão, 525 - Nova Esperança, Tupaciguara - MG, 38430-000
+2021-03-12 13:42:00.485  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : 
+Posto CEMIG
+2021-03-12 13:42:00.538  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : R. Rodrigo do Valê, 149-167 - São Cristóvão, Tupaciguara - MG, 38430-000
+2021-03-12 13:42:01.674  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : 
+1ª Igreja Presbiteriana do Brasil de Tupaciguara
+2021-03-12 13:42:01.713  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : (34) 3281-1011
+2021-03-12 13:42:01.713  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : R. Maj. Li Carlos, 72 - Brasil, Tupaciguara - MG, 38430-000
+2021-03-12 13:42:02.936  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : 
+Lojas Zema - Tupaciguara
+2021-03-12 13:42:03.054  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : (34) 3281-2950
+2021-03-12 13:42:03.055  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : R. Bueno Brandão, 232 - Centro, Tupaciguara - MG, 38430-000
+2021-03-12 13:42:04.226  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : 
+Tim
+2021-03-12 13:42:04.272  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : R. Bueno Brandão, 167 - Brasil, Tupaciguara - MG, 38430-000
+2021-03-12 13:42:05.383  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : 
+Cooperativa Agropecuária Ltda de Uberlândia
+2021-03-12 13:42:05.444  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : (34) 3281-2134
+2021-03-12 13:42:05.445  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : Av. Domingos Lopes Valadão, 274 - Tiradentes, Tupaciguara - MG, 38430-000
+2021-03-12 13:42:06.570  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : 
+Top Car auto peças em Tupaciguara
+2021-03-12 13:42:06.715  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : (34) 3281-3150
+2021-03-12 13:42:06.715  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : Av. Belo Horizonte, 156 - São Cristóvão, Tupaciguara - MG, 38430-000
+2021-03-12 13:42:07.868  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : 
+Auto Posto Tupaciguara Ltda
+2021-03-12 13:42:07.934  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : (34) 3281-2035
+2021-03-12 13:42:07.934  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : R. Gov. Bias Fortes, 4 - Centro, Tupaciguara - MG, 38430-000
+2021-03-12 13:42:09.080  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : 
+Ângela Marques de Faria
+2021-03-12 13:42:09.141  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : (34) 3281-5444
+2021-03-12 13:42:09.141  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : Av. Jucelino Kubitscheck, 124 - Comercial, Tupaciguara - MG, 38430-000
+2021-03-12 13:42:10.306  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : 
+Agência Itaú
+2021-03-12 13:42:10.369  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : 4004-4828
+2021-03-12 13:42:10.370  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : R. Bueno Brandão, 55 - Centro, Tupaciguara - MG, 38430-000
+2021-03-12 13:42:11.488  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : 
+Prefeitura Municipal de Tupaciguara-MG
+2021-03-12 13:42:11.547  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : (34) 3281-0000
+2021-03-12 13:42:11.547  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : Praça Antônio Alves Faria, s/nº - Tiradentes, Tupaciguara - MG, 38480-000
+2021-03-12 13:42:12.667  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : 
+Máquinas e veículos GP Agro
+2021-03-12 13:42:12.713  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : (34) 3281-1500
+2021-03-12 13:42:12.714  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : R. Bueno Brandão, 238 - Centro, Tupaciguara - MG, 38480-000
+2021-03-12 13:42:13.843  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : 
+Neto´s Beer Distribuidora de Bebidas
+2021-03-12 13:42:13.913  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : (34) 3281-1818
+2021-03-12 13:42:13.913  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : R. José Primo de Azevedo, 273 - Nova Esperança, Tupaciguara - MG, 38430-000
+2021-03-12 13:42:15.041  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : 
+Trifesta
+2021-03-12 13:42:15.098  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : (34) 3281-2211
+2021-03-12 13:42:15.099  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : R. Rodrigo do Valê, 184 - São Cristóvão, Tupaciguara - MG, 38430-000
+2021-03-12 13:42:16.215  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : 
+Laticínios Origem
+2021-03-12 13:42:16.258  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : (34) 3281-4350
+2021-03-12 13:42:16.258  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : R. José Ferreira Marquês, 12 - Centro, Tupaciguara - MG, 38430-000
+2021-03-12 13:42:17.425  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : 
+Lucar Veiculos
+2021-03-12 13:42:17.495  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : (34) 3281-6632
+2021-03-12 13:42:17.496  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : R. Tupaciguara, 100 - Cíntia, Tupaciguara - MG, 38480-000
+2021-03-12 13:42:18.616  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : 
+Vazante Agro Pecuária
+2021-03-12 13:42:18.683  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : (34) 3281-5898
+2021-03-12 13:42:18.684  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : R. Getúlio Vargas, 14 - Centro, Tupaciguara - MG, 38430-000
+2021-03-12 13:42:23.901  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : 
+
+2021-03-12 13:42:25.175  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : 
+ACIT/ CDL Tupaciguara
+2021-03-12 13:42:25.239  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : (34) 3281-4031
+2021-03-12 13:42:25.240  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : Av. Brasil, 161 - São Cristóvão, Tupaciguara - MG, 38480-000
+2021-03-12 13:42:26.385  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : 
+Centro Espírita Amor e Fé
+2021-03-12 13:42:26.438  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : Rua Delfim Moreira, 41 - Centro, Tupaciguara - MG, 38430-000
+2021-03-12 13:42:27.588  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : 
+Eletrodiesel - Autocenter e Pneus
+2021-03-12 13:42:27.646  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : (34) 3281-4265
+2021-03-12 13:42:27.646  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : R. Bueno Brandão, 403 - São Cristóvão, Tupaciguara - MG, 38430-000
+2021-03-12 13:42:28.780  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : 
+Companhia de Telecomunicações do Brasil Central
+2021-03-12 13:42:28.824  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : (34) 3281-4831
+2021-03-12 13:42:28.824  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : R. Carneiro e Cardoso, 14 - Cyntia, Tupaciguara - MG, 38430-000
+2021-03-12 13:42:29.932  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : 
+Luciana Storte Esteticista
+2021-03-12 13:42:29.969  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : R. Getúlio Vargas, 208 - São Cristóvão, Tupaciguara - MG, 38430-000
+2021-03-12 13:42:31.086  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : 
+TransCustódio
+2021-03-12 13:42:31.133  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : R. Peroba - Jardim do Lago, Tupaciguara - MG, 38430-000
+2021-03-12 13:42:32.289  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : 
+Minimercado Moura
+2021-03-12 13:42:32.347  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : (34) 3281-1308
+2021-03-12 13:42:32.348  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : Av. Domingos Lopes Valadão, 198 - Tiradentes, Tupaciguara - MG, 38430-000
+2021-03-12 13:42:33.467  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : 
+Companhia de Telecomunicações do Brasil Central
+2021-03-12 13:42:33.505  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : (34) 3281-6884
+2021-03-12 13:42:33.505  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : R. João Torquarto Neves, 124 - Das Paineiras, Tupaciguara - MG, 38430-000
+2021-03-12 13:42:34.621  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : 
+Fórum de Tupaciguara - TJMG
+2021-03-12 13:42:34.669  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : (34) 3281-2445
+2021-03-12 13:42:34.669  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : R. Olegário Maciel, 1 - Centro, Tupaciguara - MG, 38430-000
+2021-03-12 13:42:35.861  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : 
+Companhia de Telecomunicações do Brasil Central
+2021-03-12 13:42:35.925  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : (34) 3281-5409
+2021-03-12 13:42:35.925  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : R. Beraldino José de Faria, 84 - Morada Nova, Tupaciguara - MG, 38430-000
+2021-03-12 13:42:37.045  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : 
+Acquademia
+2021-03-12 13:42:37.085  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : (34) 3281-2589
+2021-03-12 13:42:37.086  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : Av. Brasil, 101 - Brasil, Tupaciguara - MG, 38430-000
+2021-03-12 13:42:38.195  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : 
+Bradesco
+2021-03-12 13:42:38.244  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : (34) 3281-5665
+2021-03-12 13:42:38.245  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : R. Bueno Brandão, 60 - Centro, Tupaciguara - MG, 38430-000
+2021-03-12 13:42:39.414  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : 
+ADM Tupaciguara
+2021-03-12 13:42:39.470  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : (34) 2512-1114
+2021-03-12 13:42:39.470  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : BR-452, Tupaciguara - MG, 38430-000
+2021-03-12 13:42:40.568  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : 
+Revenda Ultragaz
+2021-03-12 13:42:40.614  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : 4003-0123
+2021-03-12 13:42:40.614  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : Av. José Pereira de Carvalho, 116 - Nova Esperança, Tupaciguara - MG, 38430-000
+2021-03-12 13:42:41.713  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : 
+Loja Vivo
+2021-03-12 13:42:41.750  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : R. Bueno Brandão, 180 - São Cristóvão, Tupaciguara - MG, 38480-000
+2021-03-12 13:42:42.870  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : 
+Refrigeração Fontes
+2021-03-12 13:42:42.918  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : (34) 99969-3270
+2021-03-12 13:42:44.041  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : 
+Caixa Econômica Federal
+2021-03-12 13:42:44.099  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : (34) 3281-3500
+2021-03-12 13:42:44.099  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : R. Bueno Brandão, NUM 41 - Centro, Tupaciguara - MG, 38480-000
+2021-03-12 13:42:45.212  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : 
+Universidade Unopar - Polo Tupaciguara
+2021-03-12 13:42:45.250  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : (34) 3281-1001
+2021-03-12 13:42:45.250  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : Av. Domingos Lopes Valadão, 236 - São Cristóvão, Tupaciguara - MG, 38480-000
+2021-03-12 13:42:46.361  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : 
+Cargill Agrícola
+2021-03-12 13:42:46.405  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : (34) 3281-1358
+2021-03-12 13:42:46.406  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : R. Rodrigo do Valê, 491 - Centro, Tupaciguara - MG, 38430-000
+2021-03-12 13:42:51.636  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : 
+
+2021-03-12 13:42:52.789  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : 
+Forum Adolpho Fidelis dos Santos
+2021-03-12 13:42:52.847  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : (34) 3281-2727
+2021-03-12 13:42:52.847  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : Rua Padre Simão Janet, 132, B - Bom Sucesso, Tupaciguara - MG, 38480-000
+2021-03-12 13:42:54.044  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : 
+Tribunal Regional Eleitoral de Minas Gerais
+2021-03-12 13:42:54.095  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : (34) 3281-1022
+2021-03-12 13:42:54.095  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : R. Olegário Maciel, 6 - Centro, Tupaciguara - MG, 38430-000
+2021-03-12 13:42:55.216  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : 
+Vegas Plastic
+2021-03-12 13:42:55.262  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : Distrito Industrial, Tupaciguara - MG, 38430-000
+2021-03-12 13:42:56.413  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : 
+SUPERMERCADO IDEAL
+2021-03-12 13:42:56.479  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : (34) 3281-2532
+2021-03-12 13:42:56.479  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : R. Bueno Brandão, 201-215 - São Cristóvão, Tupaciguara - MG, 38430-000
+2021-03-12 13:42:57.595  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : 
+Cacau Show
+2021-03-12 13:42:57.664  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : (34) 3281-2000
+2021-03-12 13:42:57.664  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : R. Bueno Brandão, 72 - Centro, Tupaciguara - MG, 38430-000
+2021-03-12 13:42:58.782  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : 
+Sesi
+2021-03-12 13:42:58.823  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : (34) 3281-4353
+2021-03-12 13:42:58.823  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : R. Ouvídio José do Valê, 84 - Morada Nova, Tupaciguara - MG, 38430-000
+2021-03-12 13:43:00.093  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : 
+Bionergética Aroeira
+2021-03-12 13:43:00.202  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : (34) 3281-0500
+2021-03-12 13:43:00.202  INFO 1332 --- [http-nio-8080-exec-10] c.m.scm.service.CaptureMailingService    : Rodovia BR-452, km 77, s/n - Zona Rural, Tupaciguara - MG, 38430-000
+2021-03-12 13:43:08.388  INFO 1332 --- [http-nio-8080-exec-10] c.m.s.c.CaptureMailingController         : Sucesso no processo de cpatura de mailing para o exemplo: Empresas tupaciguara
+2021-03-12 13:48:13.769  INFO 1332 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-03-12 13:48:13.774  INFO 1332 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-03-12 13:48:13.777  INFO 1332 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-03-12 13:48:13.792  INFO 1332 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-03-12 13:48:47.700  INFO 8168 --- [main] com.matheusfelixr.scm.ScmApplication     : Starting ScmApplication using Java 1.8.0_191 on DESKTOP-83GQDVO with PID 8168 (D:\projetos\estudo\git\scm\target\classes started by mathe in D:\projetos\estudo\git\scm)
+2021-03-12 13:48:47.704  INFO 8168 --- [main] com.matheusfelixr.scm.ScmApplication     : The following profiles are active: @activatedProperties@
+2021-03-12 13:48:48.640  INFO 8168 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-03-12 13:48:48.724  INFO 8168 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 73 ms. Found 3 JPA repository interfaces.
+2021-03-12 13:48:49.151  INFO 8168 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@28369db0' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-12 13:48:49.160  INFO 8168 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-12 13:48:49.692  INFO 8168 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-03-12 13:48:49.705  INFO 8168 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-03-12 13:48:49.705  INFO 8168 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-12 13:48:49.819  INFO 8168 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-03-12 13:48:49.819  INFO 8168 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2030 ms
+2021-03-12 13:48:50.091  INFO 8168 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-03-12 13:48:50.243  INFO 8168 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.28.Final
+2021-03-12 13:48:50.427  INFO 8168 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-03-12 13:48:50.561  INFO 8168 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-03-12 13:48:50.700  INFO 8168 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-03-12 13:48:50.725  INFO 8168 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2021-03-12 13:48:52.024  INFO 8168 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-03-12 13:48:52.035  INFO 8168 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-03-12 13:48:52.511  WARN 8168 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-03-12 13:48:53.306  INFO 8168 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1372696b, org.springframework.security.web.context.SecurityContextPersistenceFilter@5b160208, org.springframework.security.web.header.HeaderWriterFilter@3f030217, org.springframework.security.web.authentication.logout.LogoutFilter@4c9bed65, com.matheusfelixr.scm.filter.JwtRequestFilter@56820446, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@16a15261, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@522f74a1, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7ca7bddd, com.matheusfelixr.scm.filter.CorsFilter@206e5183, org.springframework.security.web.session.SessionManagementFilter@673a5aa7, org.springframework.security.web.access.ExceptionTranslationFilter@62cb977a, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4425b6ed]
+2021-03-12 13:48:53.348  INFO 8168 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-03-12 13:48:54.527  INFO 8168 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-12 13:48:54.754  INFO 8168 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-03-12 13:48:54.755  INFO 8168 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-03-12 13:48:54.780  INFO 8168 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2021-03-12 13:48:54.821  INFO 8168 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-03-12 13:48:55.031  INFO 8168 --- [main] com.matheusfelixr.scm.ScmApplication     : Started ScmApplication in 7.881 seconds (JVM running for 8.473)
+2021-03-12 13:49:05.447  INFO 8168 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-03-12 13:49:05.448  INFO 8168 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-03-12 13:49:05.449  INFO 8168 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-03-12 13:49:05.563  INFO 8168 --- [http-nio-8080-exec-2] c.m.s.c.CaptureMailingController         : Inicio processo de captura de mailing para o exemplo: Empresas tupaciguara
+2021-03-12 13:49:07.002  INFO 8168 --- [Forwarding newSession on session null to remote] o.o.selenium.remote.ProtocolHandshake    : Detected dialect: W3C
+2021-03-12 13:49:22.304  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : 
+Tuplast Indústria e Comércio de Derivados de Pvc e Plástico
+2021-03-12 13:49:22.366  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : (34) 3281-1550
+2021-03-12 13:49:22.366  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : Av. Juracy Ribeiro Machado, 59 - Morada Nova, Tupaciguara - MG, 38430-000
+2021-03-12 13:49:23.518  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : 
+Rodocouto Transportes
+2021-03-12 13:49:23.577  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : (34) 3281-5388
+2021-03-12 13:49:23.578  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : R. Bueno Brandão, 561 - São Cristóvão, Tupaciguara - MG, 38430-000
+2021-03-12 13:49:24.731  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : 
+Martins e Correia Produtos de Limpeza e Descartáveis em geral
+2021-03-12 13:49:24.794  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : (34) 3281-2440
+2021-03-12 13:49:24.795  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : R. Bueno Brandão, 115 - Centro, Tupaciguara - MG, 38430-000
+2021-03-12 13:49:25.913  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : 
+Start Shop Tupaciguara
+2021-03-12 13:49:25.979  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : (34) 3281-2080
+2021-03-12 13:49:25.979  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : R. Bueno Brandão, 304 - Loja 4 - São Cristóvão, Tupaciguara - MG, 38480-000
+2021-03-12 13:49:27.104  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : 
+Marmoraria Tupaciguara
+2021-03-12 13:49:27.177  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : (34) 3281-4727
+2021-03-12 13:49:27.178  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : Av. Adilon de Araújo, 103 - Tiradentes, Tupaciguara - MG, 38430-000
+2021-03-12 13:49:28.334  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : 
+Souza
+2021-03-12 13:49:28.389  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : (34) 99660-5350
+2021-03-12 13:49:28.389  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : R. Potier Monteiro, 78 - Brasil, Tupaciguara - MG, 38480-000
+2021-03-12 13:49:29.499  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : 
+Lista Mais Comercial
+2021-03-12 13:49:29.552  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : (34) 3281-5787
+2021-03-12 13:49:29.552  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : Jet Cartuchos - R. Bueno Brandão, 319 - Ap B - São Cristóvão, Tupaciguara - MG, 38480-000
+2021-03-12 13:49:30.680  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : 
+Luiz táxi em tupaciguara
+2021-03-12 13:49:30.742  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : (34) 99635-8632
+2021-03-12 13:49:30.743  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : R. Laérte Araújo, 173 - Tiradentes, Tupaciguara - MG, 38430-000
+2021-03-12 13:49:31.861  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : 
+TransCustódio
+2021-03-12 13:49:31.909  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : R. Aroeira - Jardim do Lago, Tupaciguara - MG, 38430-000
+2021-03-12 13:49:33.058  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : 
+MedGeo Agrimensura
+2021-03-12 13:49:33.126  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : (34) 3281-3901
+2021-03-12 13:49:33.126  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : R. Bueno Brandão, 157 - Brasil, Tupaciguara - MG, 38430-000
+2021-03-12 13:49:34.245  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : 
+Associação Comercial, Industrial, Agropecuária e Prestação de Serviços de Tupaciguara
+2021-03-12 13:49:34.294  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : (34) 3281-4002
+2021-03-12 13:49:34.294  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : R. Bueno Brandão, 22 - 01 e 02 - Centro, Tupaciguara - MG, 38430-000
+2021-03-12 13:49:35.416  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : 
+Auto Peças Tupaciguara
+2021-03-12 13:49:35.489  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : (34) 3281-3150
+2021-03-12 13:49:35.489  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : R. Bueno Brandão, 425 - São Cristóvão, Tupaciguara - MG, 38430-000
+2021-03-12 13:49:36.600  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : 
+HM REFRIGERAÇÃO
+2021-03-12 13:49:36.680  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : (34) 99640-0069
+2021-03-12 13:49:36.681  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : R. João Batista de Oliveira, 193 - Nova Esperança, Tupaciguara - MG, 38430-000
+2021-03-12 13:49:37.811  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : 
+Escritorio de Contabilidade
+2021-03-12 13:49:37.862  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : R. Teófilo Marquês, 12 - Centro, Tupaciguara - MG, 38430-000
+2021-03-12 13:49:39.026  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : 
+Rodoviária de Tupaciguara
+2021-03-12 13:49:39.085  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : (34) 3281-0023
+2021-03-12 13:49:39.086  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : s/n, R. Luís Gomes de Campos - Tiradentes, Tupaciguara - MG, 38430-000
+2021-03-12 13:49:40.211  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : 
+Correios
+2021-03-12 13:49:40.278  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : (34) 3281-3687
+2021-03-12 13:49:40.278  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : R. Gov. Bias Fortes, 43 - Centro, Tupaciguara - MG, 38430-000
+2021-03-12 13:49:41.411  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : 
+Minas Goiás Agronegócios
+2021-03-12 13:49:41.478  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : (34) 3281-4955
+2021-03-12 13:49:41.479  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : R. Rodrigo do Valê, 316 - Primavera, Tupaciguara - MG, 38480-000
+2021-03-12 13:49:42.595  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : 
+Bito Materiais para Construção
+2021-03-12 13:49:42.672  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : (34) 3281-2383
+2021-03-12 13:49:42.672  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : Rua Delfim Moreira, 37 - Centro, Tupaciguara - MG, 38430-000
+2021-03-12 13:49:43.825  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : 
+Esquadrias Pereira Pires
+2021-03-12 13:49:43.863  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : (34) 3281-1727
+2021-03-12 13:49:43.863  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : R. José Ferreira Marquês, 76 - Brasil, Tupaciguara - MG, 38430-000
+2021-03-12 13:49:49.107  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : 
+
+2021-03-12 13:49:50.312  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : 
+vazante agropecuaria ltda
+2021-03-12 13:49:50.363  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : (34) 3281-4170
+2021-03-12 13:49:50.363  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : R. Bueno Brandão, 438 - Das Paineiras, Tupaciguara - MG, 38430-000
+2021-03-12 13:49:51.498  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : 
+Empresa Gontijo de Transportes
+2021-03-12 13:49:51.568  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : (34) 3281-5151
+2021-03-12 13:49:51.569  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : R. Luís Gomes de Campos - Tiradentes, Tupaciguara - MG, 38430-000
+2021-03-12 13:49:52.681  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : 
+Vazante Agro Pecuária
+2021-03-12 13:49:52.735  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : (34) 3281-1874
+2021-03-12 13:49:52.736  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : Av. Adilon de Araújo, 132 - Tiradentes, Tupaciguara - MG, 38430-000
+2021-03-12 13:49:53.897  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : 
+Bar do Zé (Tupaciguara )
+2021-03-12 13:49:53.955  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : (34) 99671-4554
+2021-03-12 13:49:53.955  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : Av. Brasil, 176 A - Centro, Tupaciguara - MG, 38480-000
+2021-03-12 13:49:55.094  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : 
+Tarwhel Materiais Para Construção
+2021-03-12 13:49:55.162  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : (34) 3281-3026
+2021-03-12 13:49:55.163  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : R. Bueno Brandão, 301 - São Cristóvão, Tupaciguara - MG, 38430-000
+2021-03-12 13:49:56.290  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : 
+Abc-Indústria e Comércio S/A-Abc-Inco
+2021-03-12 13:49:56.356  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : (34) 3281-1506
+2021-03-12 13:49:56.356  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : Avenida Adilon Araújo - s/n qd 270BL t 270B, Tupaciguara - MG, 38430-000
+2021-03-12 13:49:57.523  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : 
+Jornal O Independente
+2021-03-12 13:49:57.582  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : (34) 3281-3940
+2021-03-12 13:49:57.583  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : R. José Primo de Azevedo, 309 - Nova Esperança, Tupaciguara - MG, 38430-000
+2021-03-12 13:49:58.710  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : 
+LSZ Materiais para Construção
+2021-03-12 13:49:58.780  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : (34) 3281-6600
+2021-03-12 13:49:58.780  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : Av. Modesto Alves Prudente, 241 - Tiradentes, Tupaciguara - MG, 38430-000
+2021-03-12 13:49:59.966  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : 
+Panificadora Tupaciguara
+2021-03-12 13:50:00.029  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : (34) 3281-2150
+2021-03-12 13:50:00.030  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : R. Cel. Joaquim Mendes, 26 - Centro, Tupaciguara - MG, 38430-000
+2021-03-12 13:50:01.158  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : 
+Companhia de Telecomunicações do Brasil Central
+2021-03-12 13:50:01.223  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : (34) 3281-5425
+2021-03-12 13:50:01.223  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : R. Bueno Brandão, 22 - Primavera, Tupaciguara - MG, 38430-000
+2021-03-12 13:50:02.345  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : 
+PV Construtora e Empreendimentos
+2021-03-12 13:50:02.414  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : (34) 99338-9686
+2021-03-12 13:50:02.414  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : R. Gabriel Felipe de Faria, 45 - Centro, Tupaciguara - MG, 38430-000
+2021-03-12 13:50:03.557  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : 
+Tupaciguara Prefeitura
+2021-03-12 13:50:03.620  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : 3281-0000
+2021-03-12 13:50:03.621  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : R. Bueno Brandão, 12 - Primavera, Tupaciguara - MG, 38430-000
+2021-03-12 13:50:04.760  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : 
+Sindicato dos Trabalhadores Rurais de Tupaciguara
+2021-03-12 13:50:04.823  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : (34) 3281-3222
+2021-03-12 13:50:04.823  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : Av. Domingos Lopes Valadão, 201 - Tiradentes, Tupaciguara - MG, 38430-000
+2021-03-12 13:50:05.940  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : 
+Empresa de Assist Técnica e Extensão Rural do Est de MG
+2021-03-12 13:50:06.002  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : (34) 3281-2375
+2021-03-12 13:50:06.002  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : R. Cel. Joaquim Mendes, 59 - Centro, Tupaciguara - MG, 38430-000
+2021-03-12 13:50:07.145  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : 
+táxi tupaciguara
+2021-03-12 13:50:07.201  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : (34) 99635-8632
+2021-03-12 13:50:07.202  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : R. Duarte Ulhôa, 35 B - Centro, Tupaciguara - MG, 38480-000
+2021-03-12 13:50:08.322  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : 
+Top Ferramentas
+2021-03-12 13:50:08.386  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : Av. Joaquim Bernardes de Novais, 116 - Nova Esperança, Tupaciguara - MG, 38480-000
+2021-03-12 13:50:09.508  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : 
+Drogaria Americana Tupaciguara
+2021-03-12 13:50:09.579  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : (34) 3281-1080
+2021-03-12 13:50:09.580  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : R. Bueno Brandão, 178 - São Cristóvão, Tupaciguara - MG, 38430-000
+2021-03-12 13:50:10.690  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : 
+Câmara Municipal de Tupaciguara
+2021-03-12 13:50:10.754  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : (34) 3281-5990
+2021-03-12 13:50:10.755  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : R. Olegário Maciel, 1 - Centro, Tupaciguara - MG, 38480-000
+2021-03-12 13:50:11.878  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : 
+Cervejaria Grilo Gás
+2021-03-12 13:50:11.938  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : (34) 3281-5577
+2021-03-12 13:50:11.938  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : Av. Lindolfo Ferreira Borges, 218 - Tiradentes, Tupaciguara - MG, 38480-000
+2021-03-12 13:50:17.179  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : 
+
+2021-03-12 13:50:18.371  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : 
+Speed Motoboys
+2021-03-12 13:50:18.436  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : (34) 99867-0230
+2021-03-12 13:50:18.436  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : Rua: João Nicolau da Silva, 32 - Tiradentes, Tupaciguara - MG, 38480-000
+2021-03-12 13:50:19.629  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : 
+CAMDA - Filial Tupaciguara
+2021-03-12 13:50:19.691  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : (34) 3281-6006
+2021-03-12 13:50:19.692  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : R. Bueno Brandão, 525 - Nova Esperança, Tupaciguara - MG, 38430-000
+2021-03-12 13:50:20.862  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : 
+Posto CEMIG
+2021-03-12 13:50:20.920  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : R. Rodrigo do Valê, 149-167 - São Cristóvão, Tupaciguara - MG, 38430-000
+2021-03-12 13:50:22.042  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : 
+1ª Igreja Presbiteriana do Brasil de Tupaciguara
+2021-03-12 13:50:22.089  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : (34) 3281-1011
+2021-03-12 13:50:22.089  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : R. Maj. Li Carlos, 72 - Brasil, Tupaciguara - MG, 38430-000
+2021-03-12 13:50:23.204  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : 
+Lojas Zema - Tupaciguara
+2021-03-12 13:50:23.270  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : (34) 3281-2950
+2021-03-12 13:50:23.270  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : R. Bueno Brandão, 232 - Centro, Tupaciguara - MG, 38430-000
+2021-03-12 13:50:24.457  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : 
+Tim
+2021-03-12 13:50:24.506  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : R. Bueno Brandão, 167 - Brasil, Tupaciguara - MG, 38430-000
+2021-03-12 13:50:25.639  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : 
+Cooperativa Agropecuária Ltda de Uberlândia
+2021-03-12 13:50:25.699  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : (34) 3281-2134
+2021-03-12 13:50:25.700  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : Av. Domingos Lopes Valadão, 274 - Tiradentes, Tupaciguara - MG, 38430-000
+2021-03-12 13:50:26.842  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : 
+Top Car auto peças em Tupaciguara
+2021-03-12 13:50:26.898  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : (34) 3281-3150
+2021-03-12 13:50:26.898  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : Av. Belo Horizonte, 156 - São Cristóvão, Tupaciguara - MG, 38430-000
+2021-03-12 13:50:28.020  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : 
+Ângela Marques de Faria
+2021-03-12 13:50:28.085  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : (34) 3281-5444
+2021-03-12 13:50:28.086  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : Av. Jucelino Kubitscheck, 124 - Comercial, Tupaciguara - MG, 38430-000
+2021-03-12 13:50:29.222  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : 
+Agência Itaú
+2021-03-12 13:50:29.284  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : 4004-4828
+2021-03-12 13:50:29.284  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : R. Bueno Brandão, 55 - Centro, Tupaciguara - MG, 38430-000
+2021-03-12 13:50:30.424  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : 
+Prefeitura Municipal de Tupaciguara-MG
+2021-03-12 13:50:30.486  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : (34) 3281-0000
+2021-03-12 13:50:30.486  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : Praça Antônio Alves Faria, s/nº - Tiradentes, Tupaciguara - MG, 38480-000
+2021-03-12 13:50:31.605  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : 
+Máquinas e veículos GP Agro
+2021-03-12 13:50:31.666  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : (34) 3281-1500
+2021-03-12 13:50:31.666  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : R. Bueno Brandão, 238 - Centro, Tupaciguara - MG, 38480-000
+2021-03-12 13:50:32.787  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : 
+Neto´s Beer Distribuidora de Bebidas
+2021-03-12 13:50:32.850  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : (34) 3281-1818
+2021-03-12 13:50:32.850  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : R. José Primo de Azevedo, 273 - Nova Esperança, Tupaciguara - MG, 38430-000
+2021-03-12 13:50:34.021  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : 
+Trifesta
+2021-03-12 13:50:34.087  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : (34) 3281-2211
+2021-03-12 13:50:34.088  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : R. Rodrigo do Valê, 184 - São Cristóvão, Tupaciguara - MG, 38430-000
+2021-03-12 13:50:35.222  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : 
+Laticínios Origem
+2021-03-12 13:50:35.275  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : (34) 3281-4350
+2021-03-12 13:50:35.275  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : R. José Ferreira Marquês, 12 - Centro, Tupaciguara - MG, 38430-000
+2021-03-12 13:50:36.441  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : 
+Lucar Veiculos
+2021-03-12 13:50:36.500  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : (34) 3281-6632
+2021-03-12 13:50:36.500  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : R. Tupaciguara, 100 - Cíntia, Tupaciguara - MG, 38480-000
+2021-03-12 13:50:37.629  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : 
+Vazante Agro Pecuária
+2021-03-12 13:50:37.693  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : (34) 3281-5898
+2021-03-12 13:50:37.694  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : R. Getúlio Vargas, 14 - Centro, Tupaciguara - MG, 38430-000
+2021-03-12 13:50:38.812  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : 
+Viação Platina
+2021-03-12 13:50:38.882  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : (34) 3281-6289
+2021-03-12 13:50:38.882  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : R. Luís Gomes de Campos - Tiradentes, Tupaciguara - MG, 38430-000
+2021-03-12 13:50:40.011  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : 
+ACIT/ CDL Tupaciguara
+2021-03-12 13:50:40.082  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : (34) 3281-4031
+2021-03-12 13:50:40.082  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : Av. Brasil, 161 - São Cristóvão, Tupaciguara - MG, 38480-000
+2021-03-12 13:50:45.305  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : 
+
+2021-03-12 13:50:46.456  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : 
+Eletrodiesel - Autocenter e Pneus
+2021-03-12 13:50:46.509  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : (34) 3281-4265
+2021-03-12 13:50:46.510  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : R. Bueno Brandão, 403 - São Cristóvão, Tupaciguara - MG, 38430-000
+2021-03-12 13:50:47.619  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : 
+Companhia de Telecomunicações do Brasil Central
+2021-03-12 13:50:47.670  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : (34) 3281-4831
+2021-03-12 13:50:47.670  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : R. Carneiro e Cardoso, 14 - Cyntia, Tupaciguara - MG, 38430-000
+2021-03-12 13:50:48.775  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : 
+Luciana Storte Esteticista
+2021-03-12 13:50:48.823  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : R. Getúlio Vargas, 208 - São Cristóvão, Tupaciguara - MG, 38430-000
+2021-03-12 13:50:49.936  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : 
+TransCustódio
+2021-03-12 13:50:49.972  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : R. Peroba - Jardim do Lago, Tupaciguara - MG, 38430-000
+2021-03-12 13:50:51.094  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : 
+Minimercado Moura
+2021-03-12 13:50:51.168  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : (34) 3281-1308
+2021-03-12 13:50:51.169  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : Av. Domingos Lopes Valadão, 198 - Tiradentes, Tupaciguara - MG, 38430-000
+2021-03-12 13:50:52.326  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : 
+Companhia de Telecomunicações do Brasil Central
+2021-03-12 13:50:52.387  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : (34) 3281-6884
+2021-03-12 13:50:52.387  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : R. João Torquarto Neves, 124 - Das Paineiras, Tupaciguara - MG, 38430-000
+2021-03-12 13:50:53.500  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : 
+Fórum de Tupaciguara - TJMG
+2021-03-12 13:50:53.565  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : (34) 3281-2445
+2021-03-12 13:50:53.565  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : R. Olegário Maciel, 1 - Centro, Tupaciguara - MG, 38430-000
+2021-03-12 13:50:54.704  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : 
+Companhia de Telecomunicações do Brasil Central
+2021-03-12 13:50:54.757  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : (34) 3281-5409
+2021-03-12 13:50:54.758  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : R. Beraldino José de Faria, 84 - Morada Nova, Tupaciguara - MG, 38430-000
+2021-03-12 13:50:55.900  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : 
+Acquademia
+2021-03-12 13:50:55.953  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : (34) 3281-2589
+2021-03-12 13:50:55.953  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : Av. Brasil, 101 - Brasil, Tupaciguara - MG, 38430-000
+2021-03-12 13:50:57.088  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : 
+Bradesco
+2021-03-12 13:50:57.162  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : (34) 3281-5665
+2021-03-12 13:50:57.163  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : R. Bueno Brandão, 60 - Centro, Tupaciguara - MG, 38430-000
+2021-03-12 13:50:58.300  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : 
+ADM Tupaciguara
+2021-03-12 13:50:58.365  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : (34) 2512-1114
+2021-03-12 13:50:58.365  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : BR-452, Tupaciguara - MG, 38430-000
+2021-03-12 13:50:59.464  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : 
+Revenda Ultragaz
+2021-03-12 13:50:59.518  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : 4003-0123
+2021-03-12 13:50:59.518  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : Av. José Pereira de Carvalho, 116 - Nova Esperança, Tupaciguara - MG, 38430-000
+2021-03-12 13:51:00.624  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : 
+Refrigeração Fontes
+2021-03-12 13:51:00.676  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : (34) 99969-3270
+2021-03-12 13:51:01.859  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : 
+Loja Vivo
+2021-03-12 13:51:01.903  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : R. Bueno Brandão, 180 - São Cristóvão, Tupaciguara - MG, 38480-000
+2021-03-12 13:51:03.018  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : 
+Universidade Unopar - Polo Tupaciguara
+2021-03-12 13:51:03.066  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : (34) 3281-1001
+2021-03-12 13:51:03.066  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : Av. Domingos Lopes Valadão, 236 - São Cristóvão, Tupaciguara - MG, 38480-000
+2021-03-12 13:51:04.183  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : 
+Cargill Agrícola
+2021-03-12 13:51:04.238  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : (34) 3281-1358
+2021-03-12 13:51:04.238  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : R. Rodrigo do Valê, 491 - Centro, Tupaciguara - MG, 38430-000
+2021-03-12 13:51:05.372  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : 
+Rede Eletrosom
+2021-03-12 13:51:05.445  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : (34) 3281-3340
+2021-03-12 13:51:05.445  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : R. Bueno Brandão, 185 - São Cristóvão, Tupaciguara - MG, 38430-000
+2021-03-12 13:51:06.584  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : 
+Forum Adolpho Fidelis dos Santos
+2021-03-12 13:51:06.661  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : (34) 3281-2727
+2021-03-12 13:51:06.661  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : Rua Padre Simão Janet, 132, B - Bom Sucesso, Tupaciguara - MG, 38480-000
+2021-03-12 13:51:07.788  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : 
+Tribunal Regional Eleitoral de Minas Gerais
+2021-03-12 13:51:07.854  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : (34) 3281-1022
+2021-03-12 13:51:07.855  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : R. Olegário Maciel, 6 - Centro, Tupaciguara - MG, 38430-000
+2021-03-12 13:51:13.084  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : 
+
+2021-03-12 13:51:14.277  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : 
+SUPERMERCADO IDEAL
+2021-03-12 13:51:14.319  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : (34) 3281-2532
+2021-03-12 13:51:14.320  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : R. Bueno Brandão, 201-215 - São Cristóvão, Tupaciguara - MG, 38430-000
+2021-03-12 13:51:15.431  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : 
+Cacau Show
+2021-03-12 13:51:15.504  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : (34) 3281-2000
+2021-03-12 13:51:15.504  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : R. Bueno Brandão, 72 - Centro, Tupaciguara - MG, 38430-000
+2021-03-12 13:51:16.632  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : 
+Sesi
+2021-03-12 13:51:16.682  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : (34) 3281-4353
+2021-03-12 13:51:16.682  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : R. Ouvídio José do Valê, 84 - Morada Nova, Tupaciguara - MG, 38430-000
+2021-03-12 13:51:17.853  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : 
+Bionergética Aroeira
+2021-03-12 13:51:17.934  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : (34) 3281-0500
+2021-03-12 13:51:17.934  INFO 8168 --- [http-nio-8080-exec-2] c.m.scm.service.CaptureMailingService    : Rodovia BR-452, km 77, s/n - Zona Rural, Tupaciguara - MG, 38430-000
+2021-03-12 13:51:26.082  INFO 8168 --- [http-nio-8080-exec-2] c.m.s.c.CaptureMailingController         : Sucesso no processo de cpatura de mailing para o exemplo: Empresas tupaciguara
+2021-03-12 14:04:53.650  INFO 8168 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-03-12 14:05:12.880  INFO 5756 --- [main] com.matheusfelixr.scm.ScmApplication     : Starting ScmApplication using Java 1.8.0_191 on DESKTOP-83GQDVO with PID 5756 (D:\projetos\estudo\git\scm\target\classes started by mathe in D:\projetos\estudo\git\scm)
+2021-03-12 14:05:12.883  INFO 5756 --- [main] com.matheusfelixr.scm.ScmApplication     : The following profiles are active: @activatedProperties@
+2021-03-12 14:05:13.838  INFO 5756 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-03-12 14:05:13.921  INFO 5756 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 73 ms. Found 3 JPA repository interfaces.
+2021-03-12 14:05:14.344  INFO 5756 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@3a4ab7f7' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-12 14:05:14.351  INFO 5756 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-12 14:05:14.913  INFO 5756 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-03-12 14:05:14.926  INFO 5756 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-03-12 14:05:14.926  INFO 5756 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-12 14:05:15.039  INFO 5756 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-03-12 14:05:15.039  INFO 5756 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2078 ms
+2021-03-12 14:05:15.289  INFO 5756 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-03-12 14:05:15.435  INFO 5756 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.28.Final
+2021-03-12 14:05:15.621  INFO 5756 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-03-12 14:05:15.751  INFO 5756 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-03-12 14:05:15.880  INFO 5756 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-03-12 14:05:15.900  INFO 5756 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2021-03-12 14:05:17.214  INFO 5756 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-03-12 14:05:17.225  INFO 5756 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-03-12 14:05:17.722  WARN 5756 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-03-12 14:05:18.518  INFO 5756 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@47ab3688, org.springframework.security.web.context.SecurityContextPersistenceFilter@170f0fd6, org.springframework.security.web.header.HeaderWriterFilter@20d92f1e, org.springframework.security.web.authentication.logout.LogoutFilter@112b3298, com.matheusfelixr.scm.filter.JwtRequestFilter@7d2be319, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@695c8b32, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6dadcf58, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@47fbf95e, com.matheusfelixr.scm.filter.CorsFilter@49482761, org.springframework.security.web.session.SessionManagementFilter@506e382b, org.springframework.security.web.access.ExceptionTranslationFilter@36ec4071, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3b3b2290]
+2021-03-12 14:05:18.560  INFO 5756 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-03-12 14:05:19.688  INFO 5756 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-12 14:05:19.928  INFO 5756 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-03-12 14:05:19.929  INFO 5756 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-03-12 14:05:19.949  INFO 5756 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2021-03-12 14:05:19.988  INFO 5756 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-03-12 14:05:20.202  INFO 5756 --- [main] com.matheusfelixr.scm.ScmApplication     : Started ScmApplication in 7.861 seconds (JVM running for 8.441)
+2021-03-12 14:09:36.101  INFO 5756 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-03-12 14:09:36.101  INFO 5756 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-03-12 14:09:36.102  INFO 5756 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-03-12 14:09:36.233  INFO 5756 --- [http-nio-8080-exec-1] c.m.s.c.CaptureMailingController         : Inicio processo de captura de mailing para o exemplo: Empresas tupaciguara
+2021-03-12 14:09:37.681  INFO 5756 --- [Forwarding newSession on session null to remote] o.o.selenium.remote.ProtocolHandshake    : Detected dialect: W3C
+2021-03-12 14:09:46.362  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : 
+Martins e Correia Produtos de Limpeza e Descartáveis em geral
+2021-03-12 14:09:46.436  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : (34) 3281-2440
+2021-03-12 14:09:46.437  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : R. Bueno Brandão, 115 - Centro, Tupaciguara - MG, 38430-000
+2021-03-12 14:09:47.562  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : 
+Tuplast Indústria e Comércio de Derivados de Pvc e Plástico
+2021-03-12 14:09:47.632  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : (34) 3281-1550
+2021-03-12 14:09:47.633  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : Av. Juracy Ribeiro Machado, 59 - Morada Nova, Tupaciguara - MG, 38430-000
+2021-03-12 14:09:48.783  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : 
+Start Shop Tupaciguara
+2021-03-12 14:09:48.828  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : (34) 3281-2080
+2021-03-12 14:09:48.829  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : R. Bueno Brandão, 304 - Loja 4 - São Cristóvão, Tupaciguara - MG, 38480-000
+2021-03-12 14:09:49.945  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : 
+Marmoraria Tupaciguara
+2021-03-12 14:09:50.022  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : (34) 3281-4727
+2021-03-12 14:09:50.022  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : Av. Adilon de Araújo, 103 - Tiradentes, Tupaciguara - MG, 38430-000
+2021-03-12 14:09:51.177  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : 
+Rodocouto Transportes
+2021-03-12 14:09:51.235  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : (34) 3281-5388
+2021-03-12 14:09:51.235  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : R. Bueno Brandão, 561 - São Cristóvão, Tupaciguara - MG, 38430-000
+2021-03-12 14:09:52.379  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : 
+Luiz táxi em tupaciguara
+2021-03-12 14:09:52.448  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : (34) 99635-8632
+2021-03-12 14:09:52.449  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : R. Laérte Araújo, 173 - Tiradentes, Tupaciguara - MG, 38430-000
+2021-03-12 14:09:53.603  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : 
+Associação Comercial, Industrial, Agropecuária e Prestação de Serviços de Tupaciguara
+2021-03-12 14:09:53.672  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : (34) 3281-4002
+2021-03-12 14:09:53.673  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : R. Bueno Brandão, 22 - 01 e 02 - Centro, Tupaciguara - MG, 38430-000
+2021-03-12 14:09:54.793  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : 
+Auto Peças Tupaciguara
+2021-03-12 14:09:54.869  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : (34) 3281-3150
+2021-03-12 14:09:54.870  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : R. Bueno Brandão, 425 - São Cristóvão, Tupaciguara - MG, 38430-000
+2021-03-12 14:09:55.987  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : 
+Lista Mais Comercial
+2021-03-12 14:09:56.048  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : (34) 3281-5787
+2021-03-12 14:09:56.049  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : Jet Cartuchos - R. Bueno Brandão, 319 - Ap B - São Cristóvão, Tupaciguara - MG, 38480-000
+2021-03-12 14:09:57.218  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : 
+Escritorio de Contabilidade
+2021-03-12 14:09:57.256  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : R. Teófilo Marquês, 12 - Centro, Tupaciguara - MG, 38430-000
+2021-03-12 14:09:58.373  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : 
+Bito Materiais para Construção
+2021-03-12 14:09:58.439  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : (34) 3281-2383
+2021-03-12 14:09:58.439  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : Rua Delfim Moreira, 37 - Centro, Tupaciguara - MG, 38430-000
+2021-03-12 14:09:59.566  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : 
+Esquadrias Pereira Pires
+2021-03-12 14:09:59.621  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : (34) 3281-1727
+2021-03-12 14:09:59.621  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : R. José Ferreira Marquês, 76 - Brasil, Tupaciguara - MG, 38430-000
+2021-03-12 14:10:00.735  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : 
+Souza
+2021-03-12 14:10:00.783  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : (34) 99660-5350
+2021-03-12 14:10:00.784  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : R. Potier Monteiro, 78 - Brasil, Tupaciguara - MG, 38480-000
+2021-03-12 14:10:01.905  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : 
+Minas Goiás Agronegócios
+2021-03-12 14:10:01.966  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : (34) 3281-4955
+2021-03-12 14:10:01.967  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : R. Rodrigo do Valê, 316 - Primavera, Tupaciguara - MG, 38480-000
+2021-03-12 14:10:03.120  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : 
+Correios
+2021-03-12 14:10:03.181  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : (34) 3281-3687
+2021-03-12 14:10:03.181  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : R. Gov. Bias Fortes, 43 - Centro, Tupaciguara - MG, 38430-000
+2021-03-12 14:10:04.317  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : 
+Rodoviária de Tupaciguara
+2021-03-12 14:10:04.373  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : (34) 3281-0023
+2021-03-12 14:10:04.374  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : s/n, R. Luís Gomes de Campos - Tiradentes, Tupaciguara - MG, 38430-000
+2021-03-12 14:10:05.501  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : 
+Vazante Agro Pecuária
+2021-03-12 14:10:05.554  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : (34) 3281-1874
+2021-03-12 14:10:05.554  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : Av. Adilon de Araújo, 132 - Tiradentes, Tupaciguara - MG, 38430-000
+2021-03-12 14:10:06.675  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : 
+TransCustódio
+2021-03-12 14:10:06.730  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : R. Aroeira - Jardim do Lago, Tupaciguara - MG, 38430-000
+2021-03-12 14:10:07.899  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : 
+Tarwhel Materiais Para Construção
+2021-03-12 14:10:07.969  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : (34) 3281-3026
+2021-03-12 14:10:07.970  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : R. Bueno Brandão, 301 - São Cristóvão, Tupaciguara - MG, 38430-000
+2021-03-12 14:10:13.195  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : 
+
+2021-03-12 14:10:14.389  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : 
+Bar do Zé (Tupaciguara )
+2021-03-12 14:10:14.449  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : (34) 99671-4554
+2021-03-12 14:10:14.449  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : Av. Brasil, 176 A - Centro, Tupaciguara - MG, 38480-000
+2021-03-12 14:10:15.570  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : 
+LSZ Materiais para Construção
+2021-03-12 14:10:15.632  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : (34) 3281-6600
+2021-03-12 14:10:15.633  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : Av. Modesto Alves Prudente, 241 - Tiradentes, Tupaciguara - MG, 38430-000
+2021-03-12 14:10:16.787  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : 
+MedGeo Agrimensura
+2021-03-12 14:10:16.840  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : (34) 3281-3901
+2021-03-12 14:10:16.840  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : R. Bueno Brandão, 157 - Brasil, Tupaciguara - MG, 38430-000
+2021-03-12 14:10:17.987  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : 
+Jornal O Independente
+2021-03-12 14:10:18.054  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : (34) 3281-3940
+2021-03-12 14:10:18.054  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : R. José Primo de Azevedo, 309 - Nova Esperança, Tupaciguara - MG, 38430-000
+2021-03-12 14:10:19.215  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : 
+PV Construtora e Empreendimentos
+2021-03-12 14:10:19.270  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : (34) 99338-9686
+2021-03-12 14:10:19.271  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : R. Gabriel Felipe de Faria, 45 - Centro, Tupaciguara - MG, 38430-000
+2021-03-12 14:10:20.399  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : 
+Sindicato dos Trabalhadores Rurais de Tupaciguara
+2021-03-12 14:10:20.464  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : (34) 3281-3222
+2021-03-12 14:10:20.464  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : Av. Domingos Lopes Valadão, 201 - Tiradentes, Tupaciguara - MG, 38430-000
+2021-03-12 14:10:21.619  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : 
+Top Ferramentas
+2021-03-12 14:10:21.680  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : Av. Joaquim Bernardes de Novais, 116 - Nova Esperança, Tupaciguara - MG, 38480-000
+2021-03-12 14:10:22.841  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : 
+Drogaria Americana Tupaciguara
+2021-03-12 14:10:22.913  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : (34) 3281-1080
+2021-03-12 14:10:22.913  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : R. Bueno Brandão, 178 - São Cristóvão, Tupaciguara - MG, 38430-000
+2021-03-12 14:10:24.036  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : 
+HM REFRIGERAÇÃO
+2021-03-12 14:10:24.096  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : (34) 99640-0069
+2021-03-12 14:10:24.096  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : R. João Batista de Oliveira, 193 - Nova Esperança, Tupaciguara - MG, 38430-000
+2021-03-12 14:10:25.271  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : 
+Tupaciguara Prefeitura
+2021-03-12 14:10:25.328  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : 3281-0000
+2021-03-12 14:10:25.328  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : R. Bueno Brandão, 12 - Primavera, Tupaciguara - MG, 38430-000
+2021-03-12 14:10:26.449  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : 
+Drogaria Arantes & Campos
+2021-03-12 14:10:26.518  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : (34) 3281-6096
+2021-03-12 14:10:26.518  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : R. José Ferreira Marquês, 18 - Centro, Tupaciguara - MG, 38430-000
+2021-03-12 14:10:27.636  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : 
+Câmara Municipal de Tupaciguara
+2021-03-12 14:10:27.712  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : (34) 3281-5990
+2021-03-12 14:10:27.713  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : R. Olegário Maciel, 1 - Centro, Tupaciguara - MG, 38480-000
+2021-03-12 14:10:28.831  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : 
+1ª Igreja Presbiteriana do Brasil de Tupaciguara
+2021-03-12 14:10:28.885  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : (34) 3281-1011
+2021-03-12 14:10:28.885  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : R. Maj. Li Carlos, 72 - Brasil, Tupaciguara - MG, 38430-000
+2021-03-12 14:10:30.019  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : 
+Speed Motoboys
+2021-03-12 14:10:30.081  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : (34) 99867-0230
+2021-03-12 14:10:30.081  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : Rua: João Nicolau da Silva, 32 - Tiradentes, Tupaciguara - MG, 38480-000
+2021-03-12 14:10:31.197  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : 
+Agência Itaú
+2021-03-12 14:10:31.261  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : 4004-4828
+2021-03-12 14:10:31.262  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : R. Bueno Brandão, 55 - Centro, Tupaciguara - MG, 38430-000
+2021-03-12 14:10:32.385  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : 
+Ângela Marques de Faria
+2021-03-12 14:10:32.448  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : (34) 3281-5444
+2021-03-12 14:10:32.448  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : Av. Jucelino Kubitscheck, 124 - Comercial, Tupaciguara - MG, 38430-000
+2021-03-12 14:10:33.608  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : 
+Cooperativa Agropecuária Ltda de Uberlândia
+2021-03-12 14:10:33.667  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : (34) 3281-2134
+2021-03-12 14:10:33.668  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : Av. Domingos Lopes Valadão, 274 - Tiradentes, Tupaciguara - MG, 38430-000
+2021-03-12 14:10:34.800  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : 
+Cervejaria Grilo Gás
+2021-03-12 14:10:34.862  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : (34) 3281-5577
+2021-03-12 14:10:34.862  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : Av. Lindolfo Ferreira Borges, 218 - Tiradentes, Tupaciguara - MG, 38480-000
+2021-03-12 14:10:36.001  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : 
+Top Car auto peças em Tupaciguara
+2021-03-12 14:10:36.061  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : (34) 3281-3150
+2021-03-12 14:10:36.062  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : Av. Belo Horizonte, 156 - São Cristóvão, Tupaciguara - MG, 38430-000
+2021-03-12 14:10:41.316  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : 
+
+2021-03-12 14:10:42.656  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : 
+Neto´s Beer Distribuidora de Bebidas
+2021-03-12 14:10:42.746  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : (34) 3281-1818
+2021-03-12 14:10:42.746  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : R. José Primo de Azevedo, 273 - Nova Esperança, Tupaciguara - MG, 38430-000
+2021-03-12 14:10:43.866  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : 
+Prefeitura Municipal de Tupaciguara-MG
+2021-03-12 14:10:43.934  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : (34) 3281-0000
+2021-03-12 14:10:43.934  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : Praça Antônio Alves Faria, s/nº - Tiradentes, Tupaciguara - MG, 38480-000
+2021-03-12 14:10:45.108  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : 
+Centro Espírita Amor e Fé
+2021-03-12 14:10:45.156  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : Rua Delfim Moreira, 41 - Centro, Tupaciguara - MG, 38430-000
+2021-03-12 14:10:46.363  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : 
+Lucar Veiculos
+2021-03-12 14:10:46.412  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : (34) 3281-6632
+2021-03-12 14:10:46.413  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : R. Tupaciguara, 100 - Cíntia, Tupaciguara - MG, 38480-000
+2021-03-12 14:10:47.519  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : 
+Laticínios Origem
+2021-03-12 14:10:47.562  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : (34) 3281-4350
+2021-03-12 14:10:47.563  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : R. José Ferreira Marquês, 12 - Centro, Tupaciguara - MG, 38430-000
+2021-03-12 14:10:48.680  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : 
+ACIT/ CDL Tupaciguara
+2021-03-12 14:10:48.739  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : (34) 3281-4031
+2021-03-12 14:10:48.739  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : Av. Brasil, 161 - São Cristóvão, Tupaciguara - MG, 38480-000
+2021-03-12 14:10:49.897  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : 
+Luciana Storte Esteticista
+2021-03-12 14:10:49.929  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : R. Getúlio Vargas, 208 - São Cristóvão, Tupaciguara - MG, 38430-000
+2021-03-12 14:10:51.078  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : 
+Minimercado Moura
+2021-03-12 14:10:51.140  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : (34) 3281-1308
+2021-03-12 14:10:51.140  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : Av. Domingos Lopes Valadão, 198 - Tiradentes, Tupaciguara - MG, 38430-000
+2021-03-12 14:10:52.254  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : 
+Eletrodiesel - Autocenter e Pneus
+2021-03-12 14:10:52.323  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : (34) 3281-4265
+2021-03-12 14:10:52.324  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : R. Bueno Brandão, 403 - São Cristóvão, Tupaciguara - MG, 38430-000
+2021-03-12 14:10:53.461  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : 
+Acquademia
+2021-03-12 14:10:53.506  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : (34) 3281-2589
+2021-03-12 14:10:53.507  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : Av. Brasil, 101 - Brasil, Tupaciguara - MG, 38430-000
+2021-03-12 14:10:54.666  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : 
+Bradesco
+2021-03-12 14:10:54.734  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : (34) 3281-5665
+2021-03-12 14:10:54.735  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : R. Bueno Brandão, 60 - Centro, Tupaciguara - MG, 38430-000
+2021-03-12 14:10:55.866  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : 
+Fórum de Tupaciguara - TJMG
+2021-03-12 14:10:55.943  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : (34) 3281-2445
+2021-03-12 14:10:55.943  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : R. Olegário Maciel, 1 - Centro, Tupaciguara - MG, 38430-000
+2021-03-12 14:10:57.065  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : 
+Loja Vivo
+2021-03-12 14:10:57.111  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : R. Bueno Brandão, 180 - São Cristóvão, Tupaciguara - MG, 38480-000
+2021-03-12 14:10:58.244  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : 
+Companhia de Telecomunicações do Brasil Central
+2021-03-12 14:10:58.299  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : (34) 3281-5425
+2021-03-12 14:10:58.300  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : R. Bueno Brandão, 22 - Primavera, Tupaciguara - MG, 38430-000
+2021-03-12 14:10:59.412  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : 
+Revenda Ultragaz
+2021-03-12 14:10:59.473  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : 4003-0123
+2021-03-12 14:10:59.473  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : Av. José Pereira de Carvalho, 116 - Nova Esperança, Tupaciguara - MG, 38430-000
+2021-03-12 14:11:00.639  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : 
+Cargill Agrícola
+2021-03-12 14:11:00.680  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : (34) 3281-1358
+2021-03-12 14:11:00.680  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : R. Rodrigo do Valê, 491 - Centro, Tupaciguara - MG, 38430-000
+2021-03-12 14:11:01.781  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : 
+Universidade Unopar - Polo Tupaciguara
+2021-03-12 14:11:01.832  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : (34) 3281-1001
+2021-03-12 14:11:01.832  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : Av. Domingos Lopes Valadão, 236 - São Cristóvão, Tupaciguara - MG, 38480-000
+2021-03-12 14:11:02.956  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : 
+Forum Adolpho Fidelis dos Santos
+2021-03-12 14:11:03.009  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : (34) 3281-2727
+2021-03-12 14:11:03.009  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : Rua Padre Simão Janet, 132, B - Bom Sucesso, Tupaciguara - MG, 38480-000
+2021-03-12 14:11:04.142  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : 
+Cacau Show
+2021-03-12 14:11:04.208  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : (34) 3281-2000
+2021-03-12 14:11:04.208  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : R. Bueno Brandão, 72 - Centro, Tupaciguara - MG, 38430-000
+2021-03-12 14:11:09.444  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : 
+
+2021-03-12 14:11:10.611  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : 
+Companhia de Telecomunicações do Brasil Central
+2021-03-12 14:11:10.653  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : (34) 3281-6884
+2021-03-12 14:11:10.653  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : R. João Torquarto Neves, 124 - Das Paineiras, Tupaciguara - MG, 38430-000
+2021-03-12 14:11:11.794  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : 
+Sesi
+2021-03-12 14:11:11.847  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : (34) 3281-4353
+2021-03-12 14:11:11.847  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : R. Ouvídio José do Valê, 84 - Morada Nova, Tupaciguara - MG, 38430-000
+2021-03-12 14:11:12.972  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : 
+Companhia de Telecomunicações do Brasil Central
+2021-03-12 14:11:13.023  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : (34) 3281-5409
+2021-03-12 14:11:13.023  INFO 5756 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : R. Beraldino José de Faria, 84 - Morada Nova, Tupaciguara - MG, 38430-000
+2021-03-12 14:11:25.177  INFO 5756 --- [http-nio-8080-exec-1] c.m.s.c.CaptureMailingController         : Sucesso no processo de cpatura de mailing para o exemplo: Empresas tupaciguara
+2021-03-12 14:14:29.584  INFO 6088 --- [main] com.matheusfelixr.scm.ScmApplication     : Starting ScmApplication using Java 1.8.0_191 on DESKTOP-83GQDVO with PID 6088 (D:\projetos\estudo\git\scm\target\classes started by mathe in D:\projetos\estudo\git\scm)
+2021-03-12 14:14:29.588  INFO 6088 --- [main] com.matheusfelixr.scm.ScmApplication     : The following profiles are active: @activatedProperties@
+2021-03-12 14:14:30.509  INFO 6088 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-03-12 14:14:30.581  INFO 6088 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 63 ms. Found 3 JPA repository interfaces.
+2021-03-12 14:14:30.960  INFO 6088 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@188598ad' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-12 14:14:30.967  INFO 6088 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-12 14:14:31.562  INFO 6088 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-03-12 14:14:31.578  INFO 6088 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-03-12 14:14:31.578  INFO 6088 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-12 14:14:31.701  INFO 6088 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-03-12 14:14:31.701  INFO 6088 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2039 ms
+2021-03-12 14:14:31.957  INFO 6088 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-03-12 14:14:32.090  INFO 6088 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.28.Final
+2021-03-12 14:14:32.266  INFO 6088 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-03-12 14:14:32.403  INFO 6088 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-03-12 14:14:32.554  INFO 6088 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-03-12 14:14:32.576  INFO 6088 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2021-03-12 14:14:33.894  INFO 6088 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-03-12 14:14:33.904  INFO 6088 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-03-12 14:14:34.369  WARN 6088 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-03-12 14:14:35.090  INFO 6088 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@744199bb, org.springframework.security.web.context.SecurityContextPersistenceFilter@6eb332d1, org.springframework.security.web.header.HeaderWriterFilter@544733a4, org.springframework.security.web.authentication.logout.LogoutFilter@71e55e48, com.matheusfelixr.scm.filter.JwtRequestFilter@110318a7, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3958db82, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2b06c388, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6ce8bf64, com.matheusfelixr.scm.filter.CorsFilter@6413eeb7, org.springframework.security.web.session.SessionManagementFilter@695c8b32, org.springframework.security.web.access.ExceptionTranslationFilter@68cc6319, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2ba4b32b]
+2021-03-12 14:14:35.132  INFO 6088 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-03-12 14:14:36.196  INFO 6088 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-12 14:14:36.404  INFO 6088 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-03-12 14:14:36.406  INFO 6088 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-03-12 14:14:36.426  INFO 6088 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2021-03-12 14:14:36.467  INFO 6088 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-03-12 14:14:36.681  INFO 6088 --- [main] com.matheusfelixr.scm.ScmApplication     : Started ScmApplication in 7.655 seconds (JVM running for 8.253)
+2021-03-12 14:14:46.284  INFO 6088 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-03-12 14:14:46.284  INFO 6088 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-03-12 14:14:46.285  INFO 6088 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-03-12 14:14:46.397  INFO 6088 --- [http-nio-8080-exec-1] c.m.s.c.CaptureMailingController         : Inicio processo de captura de mailing para o exemplo: Empresas tupaciguara
+2021-03-12 14:14:47.814  INFO 6088 --- [Forwarding newSession on session null to remote] o.o.selenium.remote.ProtocolHandshake    : Detected dialect: W3C
+2021-03-12 14:14:57.265  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : 
+Martins e Correia Produtos de Limpeza e Descartáveis em geral
+2021-03-12 14:14:57.334  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : (34) 3281-2440
+2021-03-12 14:14:57.334  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : R. Bueno Brandão, 115 - Centro, Tupaciguara - MG, 38430-000
+2021-03-12 14:14:58.998  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : 
+Tuplast Indústria e Comércio de Derivados de Pvc e Plástico
+2021-03-12 14:14:59.062  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : (34) 3281-1550
+2021-03-12 14:14:59.062  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : Av. Juracy Ribeiro Machado, 59 - Morada Nova, Tupaciguara - MG, 38430-000
+2021-03-12 14:15:00.693  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : 
+Start Shop Tupaciguara
+2021-03-12 14:15:00.748  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : (34) 3281-2080
+2021-03-12 14:15:00.749  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : R. Bueno Brandão, 304 - Loja 4 - São Cristóvão, Tupaciguara - MG, 38480-000
+2021-03-12 14:15:02.398  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : 
+Marmoraria Tupaciguara
+2021-03-12 14:15:02.461  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : (34) 3281-4727
+2021-03-12 14:15:02.461  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : Av. Adilon de Araújo, 103 - Tiradentes, Tupaciguara - MG, 38430-000
+2021-03-12 14:15:04.093  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : 
+Rodocouto Transportes
+2021-03-12 14:15:04.140  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : (34) 3281-5388
+2021-03-12 14:15:04.140  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : R. Bueno Brandão, 561 - São Cristóvão, Tupaciguara - MG, 38430-000
+2021-03-12 14:15:05.825  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : 
+Luiz táxi em tupaciguara
+2021-03-12 14:15:05.889  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : (34) 99635-8632
+2021-03-12 14:15:05.890  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : R. Laérte Araújo, 173 - Tiradentes, Tupaciguara - MG, 38430-000
+2021-03-12 14:15:07.510  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : 
+Associação Comercial, Industrial, Agropecuária e Prestação de Serviços de Tupaciguara
+2021-03-12 14:15:07.562  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : (34) 3281-4002
+2021-03-12 14:15:07.562  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : R. Bueno Brandão, 22 - 01 e 02 - Centro, Tupaciguara - MG, 38430-000
+2021-03-12 14:15:09.220  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : 
+Auto Peças Tupaciguara
+2021-03-12 14:15:09.274  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : (34) 3281-3150
+2021-03-12 14:15:09.274  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : R. Bueno Brandão, 425 - São Cristóvão, Tupaciguara - MG, 38430-000
+2021-03-12 14:15:10.914  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : 
+Lista Mais Comercial
+2021-03-12 14:15:10.963  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : (34) 3281-5787
+2021-03-12 14:15:10.963  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : Jet Cartuchos - R. Bueno Brandão, 319 - Ap B - São Cristóvão, Tupaciguara - MG, 38480-000
+2021-03-12 14:15:12.591  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : 
+Escritorio de Contabilidade
+2021-03-12 14:15:12.622  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : R. Teófilo Marquês, 12 - Centro, Tupaciguara - MG, 38430-000
+2021-03-12 14:15:14.275  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : 
+Bito Materiais para Construção
+2021-03-12 14:15:14.339  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : (34) 3281-2383
+2021-03-12 14:15:14.340  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : Rua Delfim Moreira, 37 - Centro, Tupaciguara - MG, 38430-000
+2021-03-12 14:15:15.975  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : 
+Esquadrias Pereira Pires
+2021-03-12 14:15:16.016  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : (34) 3281-1727
+2021-03-12 14:15:16.017  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : R. José Ferreira Marquês, 76 - Brasil, Tupaciguara - MG, 38430-000
+2021-03-12 14:15:17.702  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : 
+Souza
+2021-03-12 14:15:17.755  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : (34) 99660-5350
+2021-03-12 14:15:17.755  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : R. Potier Monteiro, 78 - Brasil, Tupaciguara - MG, 38480-000
+2021-03-12 14:15:19.382  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : 
+Minas Goiás Agronegócios
+2021-03-12 14:15:19.438  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : (34) 3281-4955
+2021-03-12 14:15:19.438  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : R. Rodrigo do Valê, 316 - Primavera, Tupaciguara - MG, 38480-000
+2021-03-12 14:15:21.056  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : 
+Minas Goiás Agronegócios
+2021-03-12 14:15:21.196  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : (34) 3281-3687
+2021-03-12 14:15:21.197  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : R. Gov. Bias Fortes, 43 - Centro, Tupaciguara - MG, 38430-000
+2021-03-12 14:15:22.844  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : 
+Rodoviária de Tupaciguara
+2021-03-12 14:15:22.894  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : (34) 3281-0023
+2021-03-12 14:15:22.894  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : s/n, R. Luís Gomes de Campos - Tiradentes, Tupaciguara - MG, 38430-000
+2021-03-12 14:15:24.521  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : 
+Vazante Agro Pecuária
+2021-03-12 14:15:24.559  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : (34) 3281-1874
+2021-03-12 14:15:24.560  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : Av. Adilon de Araújo, 132 - Tiradentes, Tupaciguara - MG, 38430-000
+2021-03-12 14:15:26.190  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : 
+TransCustódio
+2021-03-12 14:15:26.227  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : R. Aroeira - Jardim do Lago, Tupaciguara - MG, 38430-000
+2021-03-12 14:15:27.897  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : 
+Tarwhel Materiais Para Construção
+2021-03-12 14:15:27.955  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : (34) 3281-3026
+2021-03-12 14:15:27.956  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : R. Bueno Brandão, 301 - São Cristóvão, Tupaciguara - MG, 38430-000
+2021-03-12 14:15:29.589  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : 
+Abc-Indústria e Comércio S/A-Abc-Inco
+2021-03-12 14:15:29.631  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : (34) 3281-1506
+2021-03-12 14:15:29.631  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : Avenida Adilon Araújo - s/n qd 270BL t 270B, Tupaciguara - MG, 38430-000
+2021-03-12 14:15:35.376  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : 
+Bar do Zé (Tupaciguara )
+2021-03-12 14:15:35.487  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : Av. Brasil, 176 A - Centro, Tupaciguara - MG, 38480-000
+2021-03-12 14:15:37.111  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : 
+LSZ Materiais para Construção
+2021-03-12 14:15:37.179  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : (34) 3281-6600
+2021-03-12 14:15:37.179  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : Av. Modesto Alves Prudente, 241 - Tiradentes, Tupaciguara - MG, 38430-000
+2021-03-12 14:15:38.824  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : 
+LSZ Materiais para Construção
+2021-03-12 14:15:38.868  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : (34) 3281-6600
+2021-03-12 14:15:38.868  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : Av. Modesto Alves Prudente, 241 - Tiradentes, Tupaciguara - MG, 38430-000
+2021-03-12 14:15:40.497  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : 
+Jornal O Independente
+2021-03-12 14:15:40.545  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : (34) 3281-3940
+2021-03-12 14:15:40.545  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : R. José Primo de Azevedo, 309 - Nova Esperança, Tupaciguara - MG, 38430-000
+2021-03-12 14:15:42.183  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : 
+PV Construtora e Empreendimentos
+2021-03-12 14:15:42.241  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : (34) 99338-9686
+2021-03-12 14:15:42.241  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : R. Gabriel Felipe de Faria, 45 - Centro, Tupaciguara - MG, 38430-000
+2021-03-12 14:15:43.855  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : 
+Sindicato dos Trabalhadores Rurais de Tupaciguara
+2021-03-12 14:15:43.919  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : (34) 3281-3222
+2021-03-12 14:15:43.919  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : Av. Domingos Lopes Valadão, 201 - Tiradentes, Tupaciguara - MG, 38430-000
+2021-03-12 14:15:45.561  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : 
+Sindicato dos Trabalhadores Rurais de Tupaciguara
+2021-03-12 14:15:45.608  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : (34) 3281-3222
+2021-03-12 14:15:45.608  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : Av. Domingos Lopes Valadão, 201 - Tiradentes, Tupaciguara - MG, 38430-000
+2021-03-12 14:15:47.263  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : 
+Drogaria Americana Tupaciguara
+2021-03-12 14:15:47.336  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : (34) 3281-1080
+2021-03-12 14:15:47.337  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : R. Bueno Brandão, 178 - São Cristóvão, Tupaciguara - MG, 38430-000
+2021-03-12 14:15:49.003  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : 
+HM REFRIGERAÇÃO
+2021-03-12 14:15:49.058  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : (34) 99640-0069
+2021-03-12 14:15:49.058  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : R. João Batista de Oliveira, 193 - Nova Esperança, Tupaciguara - MG, 38430-000
+2021-03-12 14:15:50.677  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : 
+Tupaciguara Prefeitura
+2021-03-12 14:15:50.729  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : 3281-0000
+2021-03-12 14:15:50.729  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : R. Bueno Brandão, 12 - Primavera, Tupaciguara - MG, 38430-000
+2021-03-12 14:15:52.354  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : 
+Drogaria Arantes & Campos
+2021-03-12 14:15:52.416  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : (34) 3281-6096
+2021-03-12 14:15:52.416  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : R. José Ferreira Marquês, 18 - Centro, Tupaciguara - MG, 38430-000
+2021-03-12 14:15:54.067  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : 
+Drogaria Arantes & Campos
+2021-03-12 14:15:54.188  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : (34) 3281-5990
+2021-03-12 14:15:54.188  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : R. Olegário Maciel, 1 - Centro, Tupaciguara - MG, 38480-000
+2021-03-12 14:15:57.538  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : 
+Speed Motoboys
+2021-03-12 14:15:57.600  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : (34) 99867-0230
+2021-03-12 14:15:57.600  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : Rua: João Nicolau da Silva, 32 - Tiradentes, Tupaciguara - MG, 38480-000
+2021-03-12 14:15:59.257  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : 
+Agência Itaú
+2021-03-12 14:15:59.306  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : 4004-4828
+2021-03-12 14:15:59.306  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : R. Bueno Brandão, 55 - Centro, Tupaciguara - MG, 38430-000
+2021-03-12 14:16:00.940  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : 
+Ângela Marques de Faria
+2021-03-12 14:16:00.991  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : (34) 3281-5444
+2021-03-12 14:16:00.992  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : Av. Jucelino Kubitscheck, 124 - Comercial, Tupaciguara - MG, 38430-000
+2021-03-12 14:16:02.628  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : 
+Cooperativa Agropecuária Ltda de Uberlândia
+2021-03-12 14:16:02.674  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : (34) 3281-2134
+2021-03-12 14:16:02.674  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : Av. Domingos Lopes Valadão, 274 - Tiradentes, Tupaciguara - MG, 38430-000
+2021-03-12 14:16:04.302  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : 
+Cooperativa Agropecuária Ltda de Uberlândia
+2021-03-12 14:16:04.404  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : (34) 3281-2134
+2021-03-12 14:16:04.405  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : Av. Domingos Lopes Valadão, 274 - Tiradentes, Tupaciguara - MG, 38430-000
+2021-03-12 14:16:06.020  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : 
+Top Car auto peças em Tupaciguara
+2021-03-12 14:16:06.088  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : (34) 3281-3150
+2021-03-12 14:16:06.088  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : Av. Belo Horizonte, 156 - São Cristóvão, Tupaciguara - MG, 38430-000
+2021-03-12 14:16:07.738  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : 
+Máquinas e veículos GP Agro
+2021-03-12 14:16:07.800  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : (34) 3281-1500
+2021-03-12 14:16:07.801  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : R. Bueno Brandão, 238 - Centro, Tupaciguara - MG, 38480-000
+2021-03-12 14:16:13.574  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : 
+
+2021-03-12 14:16:15.241  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : 
+Prefeitura Municipal de Tupaciguara-MG
+2021-03-12 14:16:15.290  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : (34) 3281-0000
+2021-03-12 14:16:15.290  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : Praça Antônio Alves Faria, s/nº - Tiradentes, Tupaciguara - MG, 38480-000
+2021-03-12 14:16:16.903  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : 
+Centro Espírita Amor e Fé
+2021-03-12 14:16:16.950  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : Rua Delfim Moreira, 41 - Centro, Tupaciguara - MG, 38430-000
+2021-03-12 14:16:18.579  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : 
+Centro Espírita Amor e Fé
+2021-03-12 14:16:18.615  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : Rua Delfim Moreira, 41 - Centro, Tupaciguara - MG, 38430-000
+2021-03-12 14:16:20.250  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : 
+Laticínios Origem
+2021-03-12 14:16:20.289  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : (34) 3281-4350
+2021-03-12 14:16:20.289  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : R. José Ferreira Marquês, 12 - Centro, Tupaciguara - MG, 38430-000
+2021-03-12 14:16:21.953  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : 
+ACIT/ CDL Tupaciguara
+2021-03-12 14:16:22.014  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : (34) 3281-4031
+2021-03-12 14:16:22.014  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : Av. Brasil, 161 - São Cristóvão, Tupaciguara - MG, 38480-000
+2021-03-12 14:16:23.657  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : 
+Luciana Storte Esteticista
+2021-03-12 14:16:23.689  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : R. Getúlio Vargas, 208 - São Cristóvão, Tupaciguara - MG, 38430-000
+2021-03-12 14:16:25.338  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : 
+Minimercado Moura
+2021-03-12 14:16:25.413  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : (34) 3281-1308
+2021-03-12 14:16:25.413  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : Av. Domingos Lopes Valadão, 198 - Tiradentes, Tupaciguara - MG, 38430-000
+2021-03-12 14:16:27.045  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : 
+Minimercado Moura
+2021-03-12 14:16:27.096  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : (34) 3281-1308
+2021-03-12 14:16:27.096  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : Av. Domingos Lopes Valadão, 198 - Tiradentes, Tupaciguara - MG, 38430-000
+2021-03-12 14:16:28.800  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : 
+Acquademia
+2021-03-12 14:16:28.831  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : (34) 3281-2589
+2021-03-12 14:16:28.831  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : Av. Brasil, 101 - Brasil, Tupaciguara - MG, 38430-000
+2021-03-12 14:16:30.480  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : 
+Bradesco
+2021-03-12 14:16:30.534  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : (34) 3281-5665
+2021-03-12 14:16:30.534  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : R. Bueno Brandão, 60 - Centro, Tupaciguara - MG, 38430-000
+2021-03-12 14:16:32.196  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : 
+Fórum de Tupaciguara - TJMG
+2021-03-12 14:16:32.253  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : (34) 3281-2445
+2021-03-12 14:16:32.253  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : R. Olegário Maciel, 1 - Centro, Tupaciguara - MG, 38430-000
+2021-03-12 14:16:33.873  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : 
+Loja Vivo
+2021-03-12 14:16:33.906  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : R. Bueno Brandão, 180 - São Cristóvão, Tupaciguara - MG, 38480-000
+2021-03-12 14:16:35.537  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : 
+Companhia de Telecomunicações do Brasil Central
+2021-03-12 14:16:35.592  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : (34) 3281-5425
+2021-03-12 14:16:35.593  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : R. Bueno Brandão, 22 - Primavera, Tupaciguara - MG, 38430-000
+2021-03-12 14:16:37.230  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : 
+Revenda Ultragaz
+2021-03-12 14:16:37.288  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : 4003-0123
+2021-03-12 14:16:37.288  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : Av. José Pereira de Carvalho, 116 - Nova Esperança, Tupaciguara - MG, 38430-000
+2021-03-12 14:16:38.929  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : 
+Cargill Agrícola
+2021-03-12 14:16:38.968  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : (34) 3281-1358
+2021-03-12 14:16:38.968  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : R. Rodrigo do Valê, 491 - Centro, Tupaciguara - MG, 38430-000
+2021-03-12 14:16:40.601  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : 
+Universidade Unopar - Polo Tupaciguara
+2021-03-12 14:16:40.633  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : (34) 3281-1001
+2021-03-12 14:16:40.634  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : Av. Domingos Lopes Valadão, 236 - São Cristóvão, Tupaciguara - MG, 38480-000
+2021-03-12 14:16:42.263  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : 
+Forum Adolpho Fidelis dos Santos
+2021-03-12 14:16:42.316  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : (34) 3281-2727
+2021-03-12 14:16:42.317  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : Rua Padre Simão Janet, 132, B - Bom Sucesso, Tupaciguara - MG, 38480-000
+2021-03-12 14:16:43.951  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : 
+Forum Adolpho Fidelis dos Santos
+2021-03-12 14:16:44.000  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : (34) 3281-2727
+2021-03-12 14:16:44.000  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : Rua Padre Simão Janet, 132, B - Bom Sucesso, Tupaciguara - MG, 38480-000
+2021-03-12 14:16:45.627  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : 
+Companhia de Telecomunicações do Brasil Central
+2021-03-12 14:16:45.667  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : (34) 3281-4831
+2021-03-12 14:16:45.668  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : R. Carneiro e Cardoso, 14 - Cyntia, Tupaciguara - MG, 38430-000
+2021-03-12 14:16:51.411  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : 
+Companhia de Telecomunicações do Brasil Central
+2021-03-12 14:16:51.452  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : (34) 3281-6884
+2021-03-12 14:16:51.453  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : R. João Torquarto Neves, 124 - Das Paineiras, Tupaciguara - MG, 38430-000
+2021-03-12 14:16:53.079  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : 
+Sesi
+2021-03-12 14:16:53.121  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : (34) 3281-4353
+2021-03-12 14:16:53.122  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : R. Ouvídio José do Valê, 84 - Morada Nova, Tupaciguara - MG, 38430-000
+2021-03-12 14:16:54.756  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : 
+Companhia de Telecomunicações do Brasil Central
+2021-03-12 14:16:54.807  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : (34) 3281-5409
+2021-03-12 14:16:54.807  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : R. Beraldino José de Faria, 84 - Morada Nova, Tupaciguara - MG, 38430-000
+2021-03-12 14:16:56.430  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : 
+Tim Empresas Tupaciguara
+2021-03-12 14:16:56.482  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : (34) 99189-9059
+2021-03-12 14:16:56.482  INFO 6088 --- [http-nio-8080-exec-1] c.m.scm.service.CaptureMailingService    : R. Bueno Brandão - São Cristóvão, Tupaciguara - MG, 38430-000
+2021-03-12 14:17:04.646  INFO 6088 --- [http-nio-8080-exec-1] c.m.s.c.CaptureMailingController         : Sucesso no processo de cpatura de mailing para o exemplo: Empresas tupaciguara
