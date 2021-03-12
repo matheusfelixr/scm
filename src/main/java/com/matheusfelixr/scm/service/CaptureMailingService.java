@@ -50,16 +50,7 @@ public class CaptureMailingService {
                 int pos = info.indexOf("\n");
                 if(pos != -1){
                     address = info.substring(0, pos);
-                    boolean isAddress = address.contains("Endereço: ");
-                    if(isAddress){
-                        address = address.replace("Endereço: ", "");
-                    }else{
-                        int i = 0;
-                        while (i == 1){
-                            
-                        }
-                    }
-
+                    address = address.replace("Endereço: ", "");
                     System.out.println(address);
                 }else{
                     address = info;
