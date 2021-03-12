@@ -18,7 +18,7 @@ import java.util.List;
 public class CaptureMailingService {
 
 
-    public MessageDTO captureMailingByExample(String example, UserAuthentication currentUser) throws Exception {
+    public MessageDTO captureMailingByExample(String example) throws Exception {
 
         System.setProperty("webdriver.chrome.driver", "driver/chromedriver.exe");
         WebDriver driver = new ChromeDriver();
@@ -38,7 +38,7 @@ public class CaptureMailingService {
 
         SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd");
         String dateFormat = sdf.format(new Date());
-        FileWriter arq = new FileWriter(dateFormat + "_RETORNO_PESQUISA_" + example + ".CSV");
+        FileWriter arq = new FileWriter("csv/"+dateFormat + "_RETORNO_PESQUISA_" + example + ".csv");
         PrintWriter printWriter = new PrintWriter(arq);
         printWriter.println("EMPRESA|TELEFONE|ENDEREÇO");
 
@@ -58,7 +58,7 @@ public class CaptureMailingService {
                         Thread.sleep(1000);
                         companyBlock.click();
                         Thread.sleep(1000);
-                         company = driver.findElement(By.className("kno-ecr-pt")).getText();
+                        company = driver.findElement(By.className("kno-ecr-pt")).getText();
                         System.out.println(company);
 
                         String info = driver.findElement(By.className("SALvLe")).getText();

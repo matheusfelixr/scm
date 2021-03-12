@@ -1,11 +1,8 @@
 package com.matheusfelixr.scm.controller;
 
-import com.matheusfelixr.scm.model.domain.UserAuthentication;
 import com.matheusfelixr.scm.model.dto.MessageDTO;
-import com.matheusfelixr.scm.model.dto.captureMailing.CaptureMailingByExampleRequestDTO;
 import com.matheusfelixr.scm.model.dto.config.ResponseApi;
 import com.matheusfelixr.scm.service.CaptureMailingService;
-import com.matheusfelixr.scm.service.SecurityService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,9 +22,6 @@ public class CaptureMailingController {
 	private static final Logger LOGGER = LoggerFactory.getLogger(CaptureMailingController.class);
 
 	@Autowired
-	private SecurityService securityService;
-
-	@Autowired
 	private CaptureMailingService captureMailingService;
 
 	@GetMapping(value  = "/by-example/{example}")
@@ -35,9 +29,7 @@ public class CaptureMailingController {
 		LOGGER.info("Inicio processo de captura de mailing para o exemplo: "+ example);
 		ResponseApi<MessageDTO> response = new ResponseApi<>();
 		try {
-			UserAuthentication currentUser = securityService.getCurrentUser();
-
-			response.setData(this.captureMailingService.captureMailingByExample(example,currentUser));
+			response.setData(this.captureMailingService.captureMailingByExample(example));
 			LOGGER.info("Sucesso no processo de cpatura de mailing para o exemplo: "+ example);
 			return ResponseEntity.ok(response);
 		} catch (ValidationException e) {
