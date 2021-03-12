@@ -2,21 +2,23 @@ package com.matheusfelixr.scm.service;
 
 import com.matheusfelixr.scm.model.domain.UserAuthentication;
 import com.matheusfelixr.scm.model.dto.MessageDTO;
-import com.matheusfelixr.scm.model.dto.security.AuthenticateResponseDTO;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.springframework.stereotype.Service;
 
+import java.io.FileWriter;
+import java.io.PrintWriter;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 @Service
 public class CaptureMailingService {
 
 
-    public MessageDTO captureMailingByNameCity(String nameCity, UserAuthentication currentUser) throws Exception {
+    public MessageDTO captureMailingByExample(String example, UserAuthentication currentUser) throws Exception {
 
 
         System.setProperty("webdriver.chrome.driver", "driver/chromedriver.exe");
@@ -27,48 +29,93 @@ public class CaptureMailingService {
 
         //realiza busca
         driver.findElement(By.id("lst-ib")).click();
-        driver.findElement(By.id("lst-ib")).sendKeys(" - uberlandia");
+        driver.findElement(By.id("lst-ib")).clear();
+        driver.findElement(By.id("lst-ib")).sendKeys(example);
         driver.findElement(By.className("sbico-c")).click();
 
         //pega elementos
         Thread.sleep(1000);
-        List<WebElement> companyBlocks = driver.findElements(By.className("rllt__link"));
+        List<WebElement> pages = driver.findElements(By.className("SJajHc"));
 
-        for (WebElement companyBlock : companyBlocks) {
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd");
+        String dateFormat = sdf.format(new Date());
+        FileWriter arq = new FileWriter(dateFormat + "_RETORNO_PESQUISA_" + example + ".CSV");
+        PrintWriter printWriter = new PrintWriter(arq);
+        printWriter.println("EMPRESA|TELEFONE|ENDEREÇO");
 
-            companyBlock.click();
-            Thread.sleep(1000);
-            String company = driver.findElement(By.className("kno-ecr-pt")).getText();
-            System.out.println("Empresa: " + company);
-
-            String info = driver.findElement(By.className("SALvLe")).getText();
-
-            // pega endereço
-            String address = "";
-            boolean containsAddress = info.contains("Endereço: ");
-            if(containsAddress){
-                int pos = info.indexOf("\n");
-                if(pos != -1){
-                    address = info.substring(0, pos);
-                    address = address.replace("Endereço: ", "");
-                    System.out.println(address);
-                }else{
-                    address = info;
-                    address = address.replace("Endereço: ", "");
-                    System.out.println(address);
+        for (WebElement page : pages) {
+            try {
+                if (pages.get(0) != page) {
+                    pages = driver.findElements(By.className("SJajHc"));
+                    pages.get(pages.size() - 1).click();
+                    Thread.sleep(6000);
                 }
+                String company ="";
+                String phone = "";
+                String address = "";
+                List<WebElement> companyBlocks = driver.findElements(By.className("rllt__link"));
+                for (WebElement companyBlock : companyBlocks) {
+                    try {
+                        Thread.sleep(1000);
+                        companyBlock.click();
+                        Thread.sleep(1000);
+                         company = driver.findElement(By.className("kno-ecr-pt")).getText();
+                        System.out.println(company);
+
+                        String info = driver.findElement(By.className("SALvLe")).getText();
+
+                        boolean containsAddress = info.contains("Endereço: ");
+                        boolean containsPhone = info.contains("Telefone: ");
+
+                        if (containsPhone) {
+                            int init = info.indexOf("Telefone: ");
+                            //pega do inicio to telefone ate o final da string
+                            String initPhone = info.substring(init, info.length());
+                            // seta posição final caso seja -1 pq e o ultimo
+                            int pos = initPhone.indexOf("\n");
+                            if (pos != -1) {
+                                phone = info.substring(init, pos);
+                                phone = phone.replace("Telefone: ", "");
+                                System.out.println(phone);
+                            } else {
+                                phone = initPhone;
+                                phone = phone.replace("Telefone: ", "");
+                                System.out.println(phone);
+                            }
+                        }
+
+                        try {
+                            if (containsAddress) {
+                                int init = info.indexOf("Endereço: ");
+                                String initAddress = info.substring(init, info.length());
+                                int pos = initAddress.indexOf("\n");
+                                if (pos != -1) {
+                                    address = info.substring(init, pos);
+                                    address = address.replace("Endereço: ", "");
+                                    System.out.println(address);
+                                } else {
+                                    address = initAddress;
+                                    address = address.replace("Endereço: ", "");
+                                    System.out.println(address);
+                                }
+                            }
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+
+                        System.out.println("\n----------------------------------------------");
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                    printWriter.println(company+"|"+phone+"|"+address);
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
             }
 
-
-
-            System.out.println( info.contains("\n"));
-
-            Thread.sleep(1000);
-            System.out.println("\n \n \n \n----------------------------------------------");
         }
-
-
-        Thread.sleep(20000);
+        arq.close();
+        Thread.sleep(8000);
         driver.close();
         return new MessageDTO("Deu certo");
     }

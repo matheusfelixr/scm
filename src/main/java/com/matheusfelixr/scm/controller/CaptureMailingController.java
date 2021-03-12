@@ -2,9 +2,8 @@ package com.matheusfelixr.scm.controller;
 
 import com.matheusfelixr.scm.model.domain.UserAuthentication;
 import com.matheusfelixr.scm.model.dto.MessageDTO;
-import com.matheusfelixr.scm.model.dto.captureMailing.CaptureMailingByNameCityRequestDTO;
+import com.matheusfelixr.scm.model.dto.captureMailing.CaptureMailingByExampleRequestDTO;
 import com.matheusfelixr.scm.model.dto.config.ResponseApi;
-import com.matheusfelixr.scm.model.dto.security.*;
 import com.matheusfelixr.scm.service.CaptureMailingService;
 import com.matheusfelixr.scm.service.SecurityService;
 import org.slf4j.Logger;
@@ -31,15 +30,15 @@ public class CaptureMailingController {
 	@Autowired
 	private CaptureMailingService captureMailingService;
 
-	@PostMapping(value  = "/by-name-city")
-	public ResponseEntity<ResponseApi<MessageDTO>> captureMailingByNameCity(@RequestBody CaptureMailingByNameCityRequestDTO captureMailingByNameCityRequestDTO, HttpServletRequest httpServletRequest) throws Exception {
-		LOGGER.debug("Inicio processo de autenticacao.");
+	@PostMapping(value  = "/by-example")
+	public ResponseEntity<ResponseApi<MessageDTO>> captureMailingByExample(@RequestBody CaptureMailingByExampleRequestDTO captureMailingByExampleRequestDTO, HttpServletRequest httpServletRequest) throws Exception {
+		LOGGER.info("Inicio processo de captura de mailing para o exemplo: "+ captureMailingByExampleRequestDTO.getExample());
 		ResponseApi<MessageDTO> response = new ResponseApi<>();
 		try {
 			UserAuthentication currentUser = securityService.getCurrentUser();
 
-			response.setData(this.captureMailingService.captureMailingByNameCity(captureMailingByNameCityRequestDTO.getNameCity(),currentUser));
-			LOGGER.debug("Autenticacao realizada com sucesso.");
+			response.setData(this.captureMailingService.captureMailingByExample(captureMailingByExampleRequestDTO.getExample(),currentUser));
+			LOGGER.info("Sucesso no processo de cpatura de mailing para o exemplo: "+ captureMailingByExampleRequestDTO.getExample());
 			return ResponseEntity.ok(response);
 		} catch (ValidationException e) {
 			LOGGER.error(e.getMessage());
@@ -47,8 +46,8 @@ public class CaptureMailingController {
 			return ResponseEntity.ok(response);
 		} catch (Exception e) {
 			e.printStackTrace();
-			LOGGER.error("Erro inesperado ao tentar autenticar");
-			List<String> errors = Arrays.asList("Erro inesperado ao tentar autenticar");
+			LOGGER.error("Erro inesperado ao capturar mailing");
+			List<String> errors = Arrays.asList("Erro inesperado ao capturar mailing");
 			response.setErrors(errors);
 			return ResponseEntity.ok(response);
 		}

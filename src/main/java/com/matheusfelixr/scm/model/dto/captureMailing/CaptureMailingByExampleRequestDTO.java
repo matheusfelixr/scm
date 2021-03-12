@@ -3,7 +3,7 @@ package com.matheusfelixr.scm.model.dto.captureMailing;
 import lombok.Data;
 
 @Data
-public class CaptureMailingByNameCityRequestDTO {
+public class CaptureMailingByExampleRequestDTO {
 
-    private String nameCity;
+    private String example;
 }
