@@ -1,10 +1,13 @@
 package com.matheusfelixr.scm.service;
 
+import com.matheusfelixr.scm.controller.SecurityController;
 import com.matheusfelixr.scm.model.dto.MessageDTO;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import java.io.FileWriter;
@@ -15,6 +18,8 @@ import java.util.List;
 
 @Service
 public class CaptureMailingService {
+
+    private static final Logger LOGGER = LoggerFactory.getLogger(CaptureMailingService.class);
 
 
     public MessageDTO captureMailingByExample(String example) throws Exception {
@@ -41,14 +46,18 @@ public class CaptureMailingService {
         PrintWriter printWriter = new PrintWriter(arq);
         printWriter.println("EMPRESA|TELEFONE|ENDEREÇO");
 
-        if(pages.size() == 0){
-            //adiciona qualquer elemento para entrar no if
-            pages.add( driver.findElement(By.id("lst-ib")));
+        int qtyPage = pages.size();
+        int indexPage = 0;
+        if(qtyPage == 0){
+            indexPage = 1;
+        } else{
+            indexPage =  qtyPage - 3;
         }
 
-        for (WebElement page : pages) {
+
+        for (int i = 0; i <= indexPage ; i++) {
             try {
-                if (pages.get(0) != page) {
+                if (i != 0) {
                     pages = driver.findElements(By.className("SJajHc"));
                     pages.get(pages.size() - 1).click();
                     Thread.sleep(4000);
@@ -62,7 +71,8 @@ public class CaptureMailingService {
                         Thread.sleep(1000);
                         companyBlock.click();
                         company = driver.findElement(By.className("kno-ecr-pt")).getText();
-                        System.out.println(company);
+
+                        LOGGER.info("\n"+company);
 
                         String info = driver.findElement(By.className("SALvLe")).getText();
 
@@ -111,10 +121,10 @@ public class CaptureMailingService {
             if (end != -1) {
                 ret = initString.substring(initCut, end);
                 ret = ret.replace(type, "");
-                System.out.println(ret);
+                LOGGER.info(ret);
             } else {
                 ret = initString.replace(type, "");
-                System.out.println(ret);
+                LOGGER.info(ret);
             }
         }
         return ret;
