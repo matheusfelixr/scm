@@ -1,0 +1,94 @@
+2021-03-12 10:19:45.745  INFO 7364 --- [main] com.matheusfelixr.scm.ScmApplication     : Starting ScmApplication using Java 1.8.0_191 on DESKTOP-83GQDVO with PID 7364 (D:\projetos\estudo\git\scm\target\classes started by mathe in D:\projetos\estudo\git\scm)
+2021-03-12 10:19:45.749  INFO 7364 --- [main] com.matheusfelixr.scm.ScmApplication     : The following profiles are active: @activatedProperties@
+2021-03-12 10:19:46.801  INFO 7364 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-03-12 10:19:46.878  INFO 7364 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 67 ms. Found 3 JPA repository interfaces.
+2021-03-12 10:19:47.286  INFO 7364 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@3a90c13c' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-12 10:19:47.291  INFO 7364 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-12 10:19:47.939  INFO 7364 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-03-12 10:19:47.956  INFO 7364 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-03-12 10:19:47.956  INFO 7364 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-12 10:19:48.088  INFO 7364 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-03-12 10:19:48.088  INFO 7364 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2269 ms
+2021-03-12 10:19:48.363  INFO 7364 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-03-12 10:19:48.516  INFO 7364 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.28.Final
+2021-03-12 10:19:48.708  INFO 7364 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-03-12 10:19:48.848  INFO 7364 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-03-12 10:19:48.980  INFO 7364 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-03-12 10:19:49.000  INFO 7364 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2021-03-12 10:19:50.391  INFO 7364 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-03-12 10:19:50.401  INFO 7364 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-03-12 10:19:50.969  WARN 7364 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-03-12 10:19:51.888  INFO 7364 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@206e5183, org.springframework.security.web.context.SecurityContextPersistenceFilter@16a15261, org.springframework.security.web.header.HeaderWriterFilter@1104ad6a, org.springframework.security.web.authentication.logout.LogoutFilter@7e35d743, com.matheusfelixr.scm.filter.JwtRequestFilter@2259d54f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5d8112e6, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1e6e29d6, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@325236f5, com.matheusfelixr.scm.filter.CorsFilter@32eb38e5, org.springframework.security.web.session.SessionManagementFilter@5b160208, org.springframework.security.web.access.ExceptionTranslationFilter@3f030217, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5039c2cf]
+2021-03-12 10:19:51.941  INFO 7364 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-03-12 10:19:53.634  INFO 7364 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-12 10:19:54.039  INFO 7364 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-03-12 10:19:54.041  INFO 7364 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-03-12 10:19:54.068  INFO 7364 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2021-03-12 10:19:54.114  INFO 7364 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-03-12 10:19:54.333  INFO 7364 --- [main] com.matheusfelixr.scm.ScmApplication     : Started ScmApplication in 9.167 seconds (JVM running for 9.811)
+2021-03-12 10:21:04.143  INFO 10244 --- [main] com.matheusfelixr.scm.ScmApplication     : Starting ScmApplication using Java 1.8.0_191 on DESKTOP-83GQDVO with PID 10244 (D:\projetos\estudo\git\scm\target\classes started by mathe in D:\projetos\estudo\git\scm)
+2021-03-12 10:21:04.147  INFO 10244 --- [main] com.matheusfelixr.scm.ScmApplication     : The following profiles are active: @activatedProperties@
+2021-03-12 10:21:05.174  INFO 10244 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-03-12 10:21:05.250  INFO 10244 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 66 ms. Found 3 JPA repository interfaces.
+2021-03-12 10:21:05.644  INFO 10244 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@29b40b3' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-12 10:21:05.654  INFO 10244 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-12 10:21:06.239  INFO 10244 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-03-12 10:21:06.253  INFO 10244 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-03-12 10:21:06.253  INFO 10244 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-12 10:21:06.363  INFO 10244 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-03-12 10:21:06.363  INFO 10244 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2143 ms
+2021-03-12 10:21:06.607  INFO 10244 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-03-12 10:21:06.757  INFO 10244 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.28.Final
+2021-03-12 10:21:06.968  INFO 10244 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-03-12 10:21:07.163  INFO 10244 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-03-12 10:21:07.335  INFO 10244 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-03-12 10:21:07.363  INFO 10244 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2021-03-12 10:21:08.757  INFO 10244 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-03-12 10:21:08.768  INFO 10244 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-03-12 10:21:09.264  WARN 10244 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-03-12 10:21:10.076  INFO 10244 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7bc4ac3e, org.springframework.security.web.context.SecurityContextPersistenceFilter@66b62332, org.springframework.security.web.header.HeaderWriterFilter@7d2a4598, org.springframework.security.web.authentication.logout.LogoutFilter@3ba815ee, com.matheusfelixr.scm.filter.JwtRequestFilter@44c2e8a8, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@240f712e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3fe11091, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@504274c1, com.matheusfelixr.scm.filter.CorsFilter@16e5c19f, org.springframework.security.web.session.SessionManagementFilter@4f3e65f4, org.springframework.security.web.access.ExceptionTranslationFilter@3833897c, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@396519b]
+2021-03-12 10:21:10.122  INFO 10244 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-03-12 10:21:11.232  INFO 10244 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-12 10:21:11.462  INFO 10244 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-03-12 10:21:11.463  INFO 10244 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-03-12 10:21:11.485  INFO 10244 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2021-03-12 10:21:11.527  INFO 10244 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-03-12 10:21:11.748  INFO 10244 --- [main] com.matheusfelixr.scm.ScmApplication     : Started ScmApplication in 8.184 seconds (JVM running for 8.818)
+2021-03-12 10:22:00.010  INFO 10244 --- [http-nio-8080-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-03-12 10:22:00.011  INFO 10244 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-03-12 10:22:00.013  INFO 10244 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2021-03-12 10:29:42.296  INFO 10244 --- [http-nio-8080-exec-8] c.m.s.c.CaptureMailingController         : Inicio processo de captura de mailing para o exemplo: empresas em uberlandia
+2021-03-12 10:29:43.738  INFO 10244 --- [Forwarding newSession on session null to remote] o.o.selenium.remote.ProtocolHandshake    : Detected dialect: W3C
+2021-03-12 10:42:53.867  INFO 5340 --- [main] com.matheusfelixr.scm.ScmApplication     : Starting ScmApplication using Java 1.8.0_191 on DESKTOP-83GQDVO with PID 5340 (D:\projetos\estudo\git\scm\target\classes started by mathe in D:\projetos\estudo\git\scm)
+2021-03-12 10:42:53.870  INFO 5340 --- [main] com.matheusfelixr.scm.ScmApplication     : The following profiles are active: @activatedProperties@
+2021-03-12 10:42:54.862  INFO 5340 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-03-12 10:42:54.937  INFO 5340 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 65 ms. Found 3 JPA repository interfaces.
+2021-03-12 10:42:55.348  INFO 5340 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@3d0cac1f' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-12 10:42:55.356  INFO 5340 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-12 10:42:56.012  INFO 5340 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-03-12 10:42:56.025  INFO 5340 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-03-12 10:42:56.025  INFO 5340 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-12 10:42:56.142  INFO 5340 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-03-12 10:42:56.142  INFO 5340 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2205 ms
+2021-03-12 10:42:56.415  INFO 5340 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-03-12 10:42:56.552  INFO 5340 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.28.Final
+2021-03-12 10:42:56.751  INFO 5340 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-03-12 10:42:56.913  INFO 5340 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-03-12 10:42:57.097  INFO 5340 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-03-12 10:42:57.130  INFO 5340 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2021-03-12 10:42:58.492  INFO 5340 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-03-12 10:42:58.503  INFO 5340 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-03-12 10:42:59.015  WARN 5340 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-03-12 10:42:59.870  INFO 5340 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@9771c71, org.springframework.security.web.context.SecurityContextPersistenceFilter@77604a86, org.springframework.security.web.header.HeaderWriterFilter@7be86438, org.springframework.security.web.authentication.logout.LogoutFilter@75f446df, com.matheusfelixr.scm.filter.JwtRequestFilter@36d5c2ce, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3a6409ec, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4bc39640, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@63c66980, com.matheusfelixr.scm.filter.CorsFilter@8cce9ad, org.springframework.security.web.session.SessionManagementFilter@62977afb, org.springframework.security.web.access.ExceptionTranslationFilter@b4c89b6, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@397f925e]
+2021-03-12 10:42:59.903  INFO 5340 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-03-12 10:43:01.150  INFO 5340 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-12 10:43:01.403  INFO 5340 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-03-12 10:43:01.405  INFO 5340 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-03-12 10:43:01.430  INFO 5340 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2021-03-12 10:43:01.473  INFO 5340 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-03-12 10:43:01.686  INFO 5340 --- [main] com.matheusfelixr.scm.ScmApplication     : Started ScmApplication in 8.434 seconds (JVM running for 9.121)
+2021-03-12 10:43:05.363  INFO 5340 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-03-12 10:43:05.363  INFO 5340 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-03-12 10:43:05.365  INFO 5340 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2021-03-12 10:43:05.480  INFO 5340 --- [http-nio-8080-exec-1] c.m.s.c.CaptureMailingController         : Inicio processo de captura de mailing para o exemplo: empresas em uberlandia
+2021-03-12 10:43:06.919  INFO 5340 --- [Forwarding newSession on session null to remote] o.o.selenium.remote.ProtocolHandshake    : Detected dialect: W3C

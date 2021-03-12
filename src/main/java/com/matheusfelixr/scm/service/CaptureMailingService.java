@@ -1,6 +1,5 @@
 package com.matheusfelixr.scm.service;
 
-import com.matheusfelixr.scm.model.domain.UserAuthentication;
 import com.matheusfelixr.scm.model.dto.MessageDTO;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -38,7 +37,7 @@ public class CaptureMailingService {
 
         SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd");
         String dateFormat = sdf.format(new Date());
-        FileWriter arq = new FileWriter("csv/"+dateFormat + "_RETORNO_PESQUISA_" + example + ".csv");
+        FileWriter arq = new FileWriter("csv/" + dateFormat + "_RETORNO_PESQUISA_" + example + ".csv");
         PrintWriter printWriter = new PrintWriter(arq);
         printWriter.println("EMPRESA|TELEFONE|ENDEREÇO");
 
@@ -49,7 +48,7 @@ public class CaptureMailingService {
                     pages.get(pages.size() - 1).click();
                     Thread.sleep(6000);
                 }
-                String company ="";
+                String company = "";
                 String phone = "";
                 String address = "";
                 List<WebElement> companyBlocks = driver.findElements(By.className("rllt__link"));
@@ -63,41 +62,14 @@ public class CaptureMailingService {
 
                         String info = driver.findElement(By.className("SALvLe")).getText();
 
-                        boolean containsAddress = info.contains("Endereço: ");
-                        boolean containsPhone = info.contains("Telefone: ");
-
-                        if (containsPhone) {
-                            int init = info.indexOf("Telefone: ");
-                            //pega do inicio to telefone ate o final da string
-                            String initPhone = info.substring(init, info.length());
-                            // seta posição final caso seja -1 pq e o ultimo
-                            int pos = initPhone.indexOf("\n");
-                            if (pos != -1) {
-                                phone = info.substring(init, pos);
-                                phone = phone.replace("Telefone: ", "");
-                                System.out.println(phone);
-                            } else {
-                                phone = initPhone;
-                                phone = phone.replace("Telefone: ", "");
-                                System.out.println(phone);
-                            }
+                        try {
+                            phone = getPhoneByContainerInfo(info, "Telefone: ");
+                        } catch (Exception e) {
+                            e.printStackTrace();
                         }
 
                         try {
-                            if (containsAddress) {
-                                int init = info.indexOf("Endereço: ");
-                                String initAddress = info.substring(init, info.length());
-                                int pos = initAddress.indexOf("\n");
-                                if (pos != -1) {
-                                    address = info.substring(init, pos);
-                                    address = address.replace("Endereço: ", "");
-                                    System.out.println(address);
-                                } else {
-                                    address = initAddress;
-                                    address = address.replace("Endereço: ", "");
-                                    System.out.println(address);
-                                }
-                            }
+                            address = getPhoneByContainerInfo(info, "Endereço: ");
                         } catch (Exception e) {
                             e.printStackTrace();
                         }
@@ -106,7 +78,7 @@ public class CaptureMailingService {
                     } catch (Exception e) {
                         e.printStackTrace();
                     }
-                    if(!phone.equals("")) {
+                    if (!phone.equals("")) {
                         printWriter.println(company + "|" + phone + "|" + address);
                     }
                 }
@@ -119,5 +91,28 @@ public class CaptureMailingService {
         Thread.sleep(8000);
         driver.close();
         return new MessageDTO("Deu certo");
+    }
+
+    private String getPhoneByContainerInfo(String info, String s) {
+        String ret = "" ;
+        boolean containsPhone = info.contains(s);
+
+        if (containsPhone) {
+            int init = info.indexOf(s);
+            //pega do inicio to telefone ate o final da string
+            String initPhone = info.substring(init, info.length());
+            // seta posição final caso seja -1 pq e o ultimo
+            int pos = initPhone.indexOf("\n");
+            if (pos != -1) {
+                ret = info.substring(init, pos);
+                ret = ret.replace(s, "");
+                System.out.println(ret);
+            } else {
+                ret = initPhone;
+                ret = ret.replace(s, "");
+                System.out.println(ret);
+            }
+        }
+        return ret;
     }
 }
