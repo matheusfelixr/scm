@@ -20,7 +20,6 @@ public class CaptureMailingService {
 
     public MessageDTO captureMailingByExample(String example, UserAuthentication currentUser) throws Exception {
 
-
         System.setProperty("webdriver.chrome.driver", "driver/chromedriver.exe");
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
@@ -107,7 +106,9 @@ public class CaptureMailingService {
                     } catch (Exception e) {
                         e.printStackTrace();
                     }
-                    printWriter.println(company+"|"+phone+"|"+address);
+                    if(!phone.equals("")) {
+                        printWriter.println(company + "|" + phone + "|" + address);
+                    }
                 }
             } catch (Exception e) {
                 e.printStackTrace();

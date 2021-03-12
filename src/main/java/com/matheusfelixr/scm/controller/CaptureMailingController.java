@@ -30,15 +30,15 @@ public class CaptureMailingController {
 	@Autowired
 	private CaptureMailingService captureMailingService;
 
-	@PostMapping(value  = "/by-example")
-	public ResponseEntity<ResponseApi<MessageDTO>> captureMailingByExample(@RequestBody CaptureMailingByExampleRequestDTO captureMailingByExampleRequestDTO, HttpServletRequest httpServletRequest) throws Exception {
-		LOGGER.info("Inicio processo de captura de mailing para o exemplo: "+ captureMailingByExampleRequestDTO.getExample());
+	@GetMapping(value  = "/by-example/{example}")
+	public ResponseEntity<ResponseApi<MessageDTO>> captureMailingByExample(@PathVariable(value = "example") String example, HttpServletRequest httpServletRequest) throws Exception {
+		LOGGER.info("Inicio processo de captura de mailing para o exemplo: "+ example);
 		ResponseApi<MessageDTO> response = new ResponseApi<>();
 		try {
 			UserAuthentication currentUser = securityService.getCurrentUser();
 
-			response.setData(this.captureMailingService.captureMailingByExample(captureMailingByExampleRequestDTO.getExample(),currentUser));
-			LOGGER.info("Sucesso no processo de cpatura de mailing para o exemplo: "+ captureMailingByExampleRequestDTO.getExample());
+			response.setData(this.captureMailingService.captureMailingByExample(example,currentUser));
+			LOGGER.info("Sucesso no processo de cpatura de mailing para o exemplo: "+ example);
 			return ResponseEntity.ok(response);
 		} catch (ValidationException e) {
 			LOGGER.error(e.getMessage());
