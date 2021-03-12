@@ -71,17 +71,20 @@ public class CaptureMailingService {
                         try {
                             phone = getItemContainerInfoByType(info, "Telefone: ");
                         } catch (Exception e) {
+                            LOGGER.error("Erro ao capturar telefone para as informações: " + info);
                             e.printStackTrace();
                         }
 
                         try {
                             address = getItemContainerInfoByType(info, "Endereço: ");
                         } catch (Exception e) {
+                            LOGGER.error("Erro ao capturar telefone para as informações: " + info);
                             e.printStackTrace();
                         }
 
                         System.out.println("\n----------------------------------------------");
                     } catch (Exception e) {
+                        LOGGER.error("Erro ao capturar empresa");
                         e.printStackTrace();
                     }
                     if (!phone.equals("")) {
@@ -118,6 +121,7 @@ public class CaptureMailingService {
             List<WebElement> pages = driver.findElements(By.className("SJajHc"));
             return pages;
         } catch (Exception e) {
+            e.printStackTrace();
             throw new ValidationException("Erro ao encontrar paginas");
         }
     }
@@ -131,6 +135,7 @@ public class CaptureMailingService {
             Thread.sleep(1000);
             return driver;
         } catch (Exception e) {
+            e.printStackTrace();
             throw new ValidationException("Erro ao abrir navegador");
         }
     }
@@ -142,6 +147,7 @@ public class CaptureMailingService {
             driver.findElement(By.id("lst-ib")).sendKeys(example);
             driver.findElement(By.className("sbico-c")).click();
         } catch (Exception e) {
+            e.printStackTrace();
             throw new ValidationException("Erro ao realizar busca no google");
         }
     }
