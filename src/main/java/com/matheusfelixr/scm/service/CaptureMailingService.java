@@ -46,6 +46,7 @@ public class CaptureMailingService {
         //pega o numero de paginas fazendo a regra de calculo
         int numberOfPages = this.getNumberOfPages(tagPages);
 
+        LOGGER.info("Possui "+ numberOfPages + " paginas");
 
         for (int i = 0; i <= numberOfPages; i++) {
             try {
@@ -56,14 +57,17 @@ public class CaptureMailingService {
                 }
                 String company = "";
                 String phone = "";
-                String address = "";
+                String fullAddress = "";
+                String road = "";
+
+                String city = "";
                 String cep = "";
                 List<WebElement> companyBlocks = driver.findElements(By.className("rllt__link"));
                 for (WebElement companyBlock : companyBlocks) {
                     try {
                         Thread.sleep(1000);
                         companyBlock.click();
-                        Thread.sleep(500);
+                        Thread.sleep(1000);
                         company = driver.findElement(By.className("kno-ecr-pt")).getText();
 
                         LOGGER.info("\n" + company);
@@ -78,17 +82,31 @@ public class CaptureMailingService {
                         }
 
                         try {
-                            address = this.getItemContainerInfoByType(info, "Endereço: ");
+                            fullAddress = this.getItemContainerInfoByType(info, "Endereço: ");
                         } catch (Exception e) {
                             LOGGER.error("Erro ao capturar telefone para as informações: " + info);
                             e.printStackTrace();
                         }
 
                         try {
-                            cep = this.getCepByAddress(address);
+                            road = this.getRoadByFullAddress(fullAddress);
+                        } catch (Exception e) {
+                            LOGGER.error("Erro ao capturar logradouro para as informações: " + info);
+                        }
+
+                        try {
+                            cep = this.getCepByFullAddress(fullAddress);
                         } catch (Exception e) {
                             LOGGER.error("Erro ao capturar cep para as informações: " + info);
                         }
+
+                        try {
+                            city = this.getCityByFullAddressAndCepAndRoad(fullAddress, cep);
+                        } catch (Exception e) {
+                            LOGGER.error("Erro ao capturar cidade para as informações: " + info);
+                        }
+
+
 
                             System.out.println("\n----------------------------------------------");
                     } catch (Exception e) {
@@ -96,7 +114,7 @@ public class CaptureMailingService {
                         e.printStackTrace();
                     }
                     if (!phone.equals("")) {
-                        printWriter.println(company + ";" + phone + ";" + address);
+                        printWriter.println(company + ";" + phone + ";" + fullAddress);
                     }
                 }
             } catch (Exception e) {
@@ -110,9 +128,48 @@ public class CaptureMailingService {
         return new MessageDTO("Sucesso ao realizar import");
     }
 
-    private String getCepByAddress(String address) {
+    private String getRoadByFullAddress(String fullAddress) {
         String ret = "";
-        ret = address.substring(address.length()-9, address.length());
+        int index = fullAddress.indexOf(",");
+        if(index != -1){
+            ret = fullAddress.substring(0, index);
+            LOGGER.info(ret);
+            return ret;
+        }
+        return "";
+    }
+
+    private String getCityByFullAddressAndCepAndRoad(String fullAddress, String cep) {
+        String ret = "";
+
+        String cepRemove = ", " + cep;
+        //verifica se existe cep
+        boolean containsCep = fullAddress.contains(cepRemove);
+        if(containsCep){
+            //remove cep da string
+            ret = fullAddress.replace(cepRemove, "");
+        }
+        int i = 0;
+        while (i <= 1){
+            String remove = "";
+            int index = ret.indexOf(",");
+            if(index == -1){
+                i = 2;
+            }else{
+                remove = ret.substring(0, index + 2);
+                ret = ret.replace(remove, "");
+            }
+        }
+
+
+
+        LOGGER.info(ret);
+        return "";
+    }
+
+    private String getCepByFullAddress(String fullAddress) {
+        String ret = "";
+        ret = fullAddress.substring(fullAddress.length()-9, fullAddress.length());
 
         if(CepHelper.isCep(ret)){
             LOGGER.info(ret);
@@ -156,7 +213,7 @@ public class CaptureMailingService {
             return driver;
         } catch (Exception e) {
             e.printStackTrace();
-            throw new ValidationException("Erro ao abrir navegador");
+            throw new ValidationException("Erro fatal ao abrir navegador. Contate o desenvolvedor.");
         }
     }
 
@@ -168,7 +225,7 @@ public class CaptureMailingService {
             driver.findElement(By.className("sbico-c")).click();
         } catch (Exception e) {
             e.printStackTrace();
-            throw new ValidationException("Erro ao realizar busca no google");
+            throw new ValidationException("Erro fatal ao realizar busca no google. Contate o desenvolvedor.");
         }
     }
 
