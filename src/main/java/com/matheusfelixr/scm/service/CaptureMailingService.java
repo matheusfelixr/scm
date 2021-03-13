@@ -1,6 +1,7 @@
 package com.matheusfelixr.scm.service;
 
 import com.matheusfelixr.scm.model.dto.MessageDTO;
+import com.matheusfelixr.scm.util.CepHelper;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -28,13 +29,13 @@ public class CaptureMailingService {
         String uriDriver = "driver/chromedriver.exe";
 
         //Abre navegador
-        WebDriver driver = openBrowser(url, uriDriver);
+        WebDriver driver = this.openBrowser(url, uriDriver);
 
         //realiza busca no google
-        searchGoogle(example, driver);
+        this.searchGoogle(example, driver);
 
         //pega tags de pagina
-        List<WebElement> tagPages = getPages(driver);
+        List<WebElement> tagPages = this.getPages(driver);
 
 
         String dateFormat = new SimpleDateFormat("yyyyMMdd").format(new Date());
@@ -43,7 +44,7 @@ public class CaptureMailingService {
         printWriter.println("EMPRESA|TELEFONE|ENDEREÇO");
 
         //pega o numero de paginas fazendo a regra de calculo
-        int numberOfPages = getNumberOfPages(tagPages);
+        int numberOfPages = this.getNumberOfPages(tagPages);
 
 
         for (int i = 0; i <= numberOfPages; i++) {
@@ -56,6 +57,7 @@ public class CaptureMailingService {
                 String company = "";
                 String phone = "";
                 String address = "";
+                String cep = "";
                 List<WebElement> companyBlocks = driver.findElements(By.className("rllt__link"));
                 for (WebElement companyBlock : companyBlocks) {
                     try {
@@ -69,20 +71,26 @@ public class CaptureMailingService {
                         String info = driver.findElement(By.className("SALvLe")).getText();
 
                         try {
-                            phone = getItemContainerInfoByType(info, "Telefone: ");
+                            phone = this.getItemContainerInfoByType(info, "Telefone: ");
                         } catch (Exception e) {
                             LOGGER.error("Erro ao capturar telefone para as informações: " + info);
                             e.printStackTrace();
                         }
 
                         try {
-                            address = getItemContainerInfoByType(info, "Endereço: ");
+                            address = this.getItemContainerInfoByType(info, "Endereço: ");
                         } catch (Exception e) {
                             LOGGER.error("Erro ao capturar telefone para as informações: " + info);
                             e.printStackTrace();
                         }
 
-                        System.out.println("\n----------------------------------------------");
+                        try {
+                            cep = this.getCepByAddress(address);
+                        } catch (Exception e) {
+                            LOGGER.error("Erro ao capturar cep para as informações: " + info);
+                        }
+
+                            System.out.println("\n----------------------------------------------");
                     } catch (Exception e) {
                         LOGGER.error("Erro ao capturar empresa");
                         e.printStackTrace();
@@ -100,6 +108,18 @@ public class CaptureMailingService {
         Thread.sleep(8000);
         driver.close();
         return new MessageDTO("Sucesso ao realizar import");
+    }
+
+    private String getCepByAddress(String address) {
+        String ret = "";
+        ret = address.substring(address.length()-9, address.length());
+
+        if(CepHelper.isCep(ret)){
+            LOGGER.info(ret);
+            return ret;
+        }
+
+        return "";
     }
 
     private int getNumberOfPages(List<WebElement> tagPages) {
