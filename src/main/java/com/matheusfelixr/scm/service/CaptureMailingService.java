@@ -37,19 +37,13 @@ public class CaptureMailingService {
         //pega tags de pagina
         List<WebElement> tagPages = this.getPages(driver);
 
-
-        String dateFormat = new SimpleDateFormat("yyyyMMdd").format(new Date());
-        FileWriter arq = new FileWriter("csv/" + dateFormat + "_RETORNO_PESQUISA_" + example + ".csv");
-        PrintWriter printWriter = new PrintWriter(arq);
-        printWriter.println("EMPRESA|TELEFONE|ENDEREÇO");
-
         //pega o numero de paginas fazendo a regra de calculo
         int numberOfPages = this.getNumberOfPages(tagPages);
 
-        LOGGER.info("Possui "+ numberOfPages + " paginas");
-
+        //percorre todas as paginas
         for (int i = 0; i <= numberOfPages; i++) {
             try {
+
                 if (i != 0) {
                     tagPages = driver.findElements(By.className("SJajHc"));
                     tagPages.get(tagPages.size() - 1).click();
@@ -114,7 +108,6 @@ public class CaptureMailingService {
                         e.printStackTrace();
                     }
                     if (!phone.equals("")) {
-                        printWriter.println(company + ";" + phone + ";" + fullAddress);
                     }
                 }
             } catch (Exception e) {
@@ -122,7 +115,7 @@ public class CaptureMailingService {
             }
 
         }
-        arq.close();
+
         Thread.sleep(8000);
         driver.close();
         return new MessageDTO("Sucesso ao realizar import");
@@ -189,6 +182,7 @@ public class CaptureMailingService {
             //remove a pagina atual
             numberOfPages = numberTagPages - 3;
         }
+        LOGGER.info("Possui "+ numberOfPages + " paginas");
         return numberOfPages;
     }
 
