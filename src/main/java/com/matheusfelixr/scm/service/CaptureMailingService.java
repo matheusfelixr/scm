@@ -1,5 +1,6 @@
 package com.matheusfelixr.scm.service;
 
+import com.matheusfelixr.scm.model.domain.Company;
 import com.matheusfelixr.scm.model.dto.MessageDTO;
 import com.matheusfelixr.scm.util.CepHelper;
 import org.openqa.selenium.By;
@@ -11,10 +12,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import javax.xml.bind.ValidationException;
-import java.io.FileWriter;
-import java.io.PrintWriter;
-import java.text.SimpleDateFormat;
-import java.util.Date;
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -24,7 +22,8 @@ public class CaptureMailingService {
 
 
     public MessageDTO captureMailingByExample(String example) throws Exception {
-
+        //Inicialização de variaveis
+        List<Company> companies = new ArrayList<>();
         String url = "https://www.google.com/search?tbs=lrf:!1m4!1u3!2m2!3m1!1e1!1m4!1u2!2m2!2m1!1e1!2m1!1e2!2m1!1e3,lf:1,lf_ui:2&tbm=lcl&sxsrf=ALeKk01pgIMS0wVa2kMx6-wP9kYIrLLG0Q:1615496772648&q=empresas#rlfi=hd:;si:;mv:[[-18.8735391,-48.2425554],[-18.9434743,-48.341009400000004]];tbs:lrf:!1m4!1u3!2m2!3m1!1e1!1m4!1u2!2m2!2m1!1e1!2m1!1e2!2m1!1e3,lf:1,lf_ui:2";
         String uriDriver = "driver/chromedriver.exe";
 
@@ -34,6 +33,17 @@ public class CaptureMailingService {
         //realiza busca no google
         this.searchGoogle(example, driver);
 
+        //percorre todas as paginas e captura as informações e adiciona na lista
+        this.scrollThroughAllPages(companies, driver);
+
+        //Encerra chrome
+        this.finalizeDriver(driver);
+
+
+        return new MessageDTO("Sucesso ao realizar import");
+    }
+
+    private void scrollThroughAllPages(List<Company> companies, WebDriver driver) throws Exception {
         //pega tags de pagina
         List<WebElement> tagPages = this.getPages(driver);
 
@@ -41,92 +51,117 @@ public class CaptureMailingService {
         int numberOfPages = this.getNumberOfPages(tagPages);
 
         //percorre todas as paginas
-        for (int i = 0; i <= numberOfPages; i++) {
-            try {
+        for (int i = 0; i < numberOfPages; i++) {
+            checkAndSkipPage(driver, i);
+            LOGGER.info("Pagina de busca " + (i + 1));
+            captureBlockCompanies(companies, driver);
+        }
+        LOGGER.info("Foram encontrados " + companies.size() + " empresas, em " + numberOfPages +" paginas." );
 
-                if (i != 0) {
-                    tagPages = driver.findElements(By.className("SJajHc"));
-                    tagPages.get(tagPages.size() - 1).click();
-                    Thread.sleep(4000);
-                }
-                String company = "";
-                String phone = "";
-                String fullAddress = "";
-                String road = "";
+    }
 
-                String city = "";
-                String cep = "";
-                List<WebElement> companyBlocks = driver.findElements(By.className("rllt__link"));
-                for (WebElement companyBlock : companyBlocks) {
-                    try {
-                        Thread.sleep(1000);
-                        companyBlock.click();
-                        Thread.sleep(1000);
-                        company = driver.findElement(By.className("kno-ecr-pt")).getText();
+    private void finalizeDriver(WebDriver driver) throws InterruptedException {
+        Thread.sleep(2000);
+        driver.close();
+    }
 
-                        LOGGER.info("\n" + company);
+    private void checkAndSkipPage(WebDriver driver, int i) throws Exception {
+        List<WebElement> tagPages;
+        if (i != 0) {
+            //muda de pagina
+            tagPages = this.getPages(driver);
+            tagPages.get(tagPages.size() - 1).click();
+        }
+    }
 
-                        String info = driver.findElement(By.className("SALvLe")).getText();
+    private void captureBlockCompanies(List<Company> companies, WebDriver driver) {
+        try {
+            List<WebElement> companyBlocks = getBlockCompanies(driver);
 
-                        try {
-                            phone = this.getItemContainerInfoByType(info, "Telefone: ");
-                        } catch (Exception e) {
-                            LOGGER.error("Erro ao capturar telefone para as informações: " + info);
-                            e.printStackTrace();
-                        }
-
-                        try {
-                            fullAddress = this.getItemContainerInfoByType(info, "Endereço: ");
-                        } catch (Exception e) {
-                            LOGGER.error("Erro ao capturar telefone para as informações: " + info);
-                            e.printStackTrace();
-                        }
-
-                        try {
-                            road = this.getRoadByFullAddress(fullAddress);
-                        } catch (Exception e) {
-                            LOGGER.error("Erro ao capturar logradouro para as informações: " + info);
-                        }
-
-                        try {
-                            cep = this.getCepByFullAddress(fullAddress);
-                        } catch (Exception e) {
-                            LOGGER.error("Erro ao capturar cep para as informações: " + info);
-                        }
-
-                        try {
-                            city = this.getCityByFullAddressAndCepAndRoad(fullAddress, cep);
-                        } catch (Exception e) {
-                            LOGGER.error("Erro ao capturar cidade para as informações: " + info);
-                        }
-
-
-
-                            System.out.println("\n----------------------------------------------");
-                    } catch (Exception e) {
-                        LOGGER.error("Erro ao capturar empresa");
-                        e.printStackTrace();
-                    }
-                    if (!phone.equals("")) {
-                    }
-                }
-            } catch (Exception e) {
-                e.printStackTrace();
+            for (WebElement companyBlock : companyBlocks) {
+                companies.add(getObjectCompany(driver, companyBlock));
             }
 
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    private Company getObjectCompany(WebDriver driver, WebElement companyBlock) {
+        Company company = new Company();
+        try {
+            companyBlock.click();
+
+            captureInfo(driver, company);
+
+        } catch (Exception e) {
+            LOGGER.error("Erro ao capturar empresa");
+            e.printStackTrace();
+        }
+        LOGGER.info(company.toString());
+        return company;
+    }
+
+    private void captureInfo(WebDriver driver, Company company) throws InterruptedException {
+        company.setName(this.getCompanyName(driver));
+
+        String blockInfo = this.getBlockInfo(driver);
+
+        this.captureInfoByBlockInfo(company, blockInfo);
+    }
+
+    private void captureInfoByBlockInfo(Company company, String blockInfo) {
+        try {
+            company.setPhone(this.getItemContainerInfoByType(blockInfo, "Telefone: "));
+        } catch (Exception e) {
+            LOGGER.error("Erro ao capturar telefone para as informações: " + blockInfo);
+            e.printStackTrace();
+        }
+        try {
+            company.setFullAddress(this.getItemContainerInfoByType(blockInfo, "Endereço: "));
+        } catch (Exception e) {
+            LOGGER.error("Erro ao capturar telefone para as informações: " + blockInfo);
+            e.printStackTrace();
         }
 
-        Thread.sleep(8000);
-        driver.close();
-        return new MessageDTO("Sucesso ao realizar import");
+        try {
+            company.setRoad(this.getRoadByFullAddress(company.getFullAddress()));
+        } catch (Exception e) {
+            LOGGER.error("Erro ao capturar logradouro para as informações: " + blockInfo);
+        }
+
+        try {
+            company.setCep(this.getCepByFullAddress(company.getFullAddress()));
+        } catch (Exception e) {
+            LOGGER.error("Erro ao capturar cep para as informações: " + blockInfo);
+        }
+
+        try {
+            company.setCity(this.getCityByFullAddressAndCepAndRoad(company.getFullAddress(), company.getCep()));
+        } catch (Exception e) {
+            LOGGER.error("Erro ao capturar cidade para as informações: " + blockInfo);
+        }
+    }
+
+    private String getBlockInfo(WebDriver driver) {
+        return driver.findElement(By.className("SALvLe")).getText();
+    }
+
+    private String getCompanyName(WebDriver driver) throws InterruptedException {
+        Thread.sleep(1000);
+        return driver.findElement(By.className("kno-ecr-pt")).getText();
+    }
+
+    private List<WebElement> getBlockCompanies(WebDriver driver) throws InterruptedException {
+        Thread.sleep(4000);
+        return driver.findElements(By.className("rllt__link"));
     }
 
     private String getRoadByFullAddress(String fullAddress) {
         String ret = "";
         int index = fullAddress.indexOf(",");
-        if(index != -1){
+        if (index != -1) {
             ret = fullAddress.substring(0, index);
-            LOGGER.info(ret);
             return ret;
         }
         return "";
@@ -138,34 +173,29 @@ public class CaptureMailingService {
         String cepRemove = ", " + cep;
         //verifica se existe cep
         boolean containsCep = fullAddress.contains(cepRemove);
-        if(containsCep){
+        if (containsCep) {
             //remove cep da string
             ret = fullAddress.replace(cepRemove, "");
         }
         int i = 0;
-        while (i <= 1){
+        while (i <= 1) {
             String remove = "";
             int index = ret.indexOf(",");
-            if(index == -1){
+            if (index == -1) {
                 i = 2;
-            }else{
+            } else {
                 remove = ret.substring(0, index + 2);
                 ret = ret.replace(remove, "");
             }
         }
-
-
-
-        LOGGER.info(ret);
-        return "";
+        return ret;
     }
 
     private String getCepByFullAddress(String fullAddress) {
         String ret = "";
-        ret = fullAddress.substring(fullAddress.length()-9, fullAddress.length());
+        ret = fullAddress.substring(fullAddress.length() - 9, fullAddress.length());
 
-        if(CepHelper.isCep(ret)){
-            LOGGER.info(ret);
+        if (CepHelper.isCep(ret)) {
             return ret;
         }
 
@@ -182,7 +212,7 @@ public class CaptureMailingService {
             //remove a pagina atual
             numberOfPages = numberTagPages - 3;
         }
-        LOGGER.info("Possui "+ numberOfPages + " paginas");
+        LOGGER.info("Possui " + numberOfPages + " paginas");
         return numberOfPages;
     }
 
@@ -237,10 +267,8 @@ public class CaptureMailingService {
             if (end != -1) {
                 ret = initString.substring(initCut, end);
                 ret = ret.replace(type, "");
-                LOGGER.info(ret);
             } else {
                 ret = initString.replace(type, "");
-                LOGGER.info(ret);
             }
         }
         return ret;
