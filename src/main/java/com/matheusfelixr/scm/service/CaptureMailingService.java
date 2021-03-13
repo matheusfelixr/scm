@@ -12,7 +12,11 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import javax.xml.bind.ValidationException;
+import java.io.FileWriter;
+import java.io.PrintWriter;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 @Service
@@ -39,6 +43,23 @@ public class CaptureMailingService {
         //Encerra chrome
         this.finalizeDriver(driver);
 
+        try {
+
+            String dateFormat = new SimpleDateFormat("yyyy-MM-dd-ss").format(new Date());
+            FileWriter arq = new FileWriter("csv/" + dateFormat + "_RETORNO_PESQUISA_" + example + ".csv");
+            PrintWriter printWriter = new PrintWriter(arq);
+            printWriter.println("EMPRESA|TELEFONE|CIDADE|ENDEREÇO");
+
+            for (Company company : companies) {
+                printWriter.println(company.getName() + ";" + company.getPhone() + ";" + company.getCity()+ ";" + company.getFullAddress());
+            }
+
+
+            arq.close();
+
+        } catch (Exception e) {
+            throw new ValidationException("Erro ao gerar arquivo com informações");
+        }
 
         return new MessageDTO("Sucesso ao realizar import");
     }
@@ -56,7 +77,7 @@ public class CaptureMailingService {
             LOGGER.info("Pagina de busca " + (i + 1));
             captureBlockCompanies(companies, driver);
         }
-        LOGGER.info("Foram encontrados " + companies.size() + " empresas, em " + numberOfPages +" paginas." );
+        LOGGER.info("Foram encontrados " + companies.size() + " empresas, em " + numberOfPages + " paginas.");
 
     }
 
