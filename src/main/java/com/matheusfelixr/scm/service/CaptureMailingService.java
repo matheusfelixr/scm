@@ -43,25 +43,33 @@ public class CaptureMailingService {
         //Encerra chrome
         this.finalizeDriver(driver);
 
-        try {
+        //escrever csv
+        this.printCsv(example, companies);
 
+        return new MessageDTO("Sucesso ao realizar import");
+    }
+
+    private void printCsv(String example, List<Company> companies) throws ValidationException {
+        try {
+            if (companies.isEmpty()) {
+                new ValidationException("Não foram encontrados itens na busca.");
+            }
             String dateFormat = new SimpleDateFormat("yyyy-MM-dd-ss").format(new Date());
             FileWriter arq = new FileWriter("csv/" + dateFormat + "_RETORNO_PESQUISA_" + example + ".csv");
             PrintWriter printWriter = new PrintWriter(arq);
             printWriter.println("EMPRESA|TELEFONE|CIDADE|ENDEREÇO");
 
             for (Company company : companies) {
-                printWriter.println(company.getName() + ";" + company.getPhone() + ";" + company.getCity()+ ";" + company.getFullAddress());
+                if (company.getPhone() != null) {
+                    printWriter.println(company.getName() + ";" + company.getPhone() + ";" + company.getCity() + ";" + company.getFullAddress());
+                }
             }
-
 
             arq.close();
 
         } catch (Exception e) {
             throw new ValidationException("Erro ao gerar arquivo com informações");
         }
-
-        return new MessageDTO("Sucesso ao realizar import");
     }
 
     private void scrollThroughAllPages(List<Company> companies, WebDriver driver) throws Exception {
@@ -97,7 +105,7 @@ public class CaptureMailingService {
 
     private void captureBlockCompanies(List<Company> companies, WebDriver driver) {
         try {
-            List<WebElement> companyBlocks = getBlockCompanies(driver);
+            List<WebElement> companyBlocks = this.getBlockCompanies(driver);
 
             for (WebElement companyBlock : companyBlocks) {
                 companies.add(getObjectCompany(driver, companyBlock));
