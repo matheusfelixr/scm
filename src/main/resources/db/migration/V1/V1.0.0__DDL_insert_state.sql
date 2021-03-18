@@ -7,5 +7,5 @@ INSERT INTO public.state(id,id_ibge, uf) VALUES (6, 23, 'CE');
 INSERT INTO public.state(id,id_ibge, uf) VALUES (7, 53, 'DF');
 INSERT INTO public.state(id,id_ibge, uf) VALUES (8, 32, 'ES');
 
-INSERT INTO public.state(id,id_ibge, uf) VALUES (8, 52, 'GO');
+INSERT INTO public.state(id,id_ibge, uf) VALUES (9, 52, 'GO');
 
