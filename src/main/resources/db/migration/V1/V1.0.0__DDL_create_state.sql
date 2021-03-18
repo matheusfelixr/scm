@@ -1,6 +1,3 @@
-
-DROP TABLE public.state;
-
 CREATE TABLE public.state
 (
     id bigint NOT NULL,
@@ -14,4 +11,14 @@ CREATE TABLE public.state
 TABLESPACE pg_default;
 
 ALTER TABLE public.state
-    OWNER to postgres;
+    OWNER to scm;
+
+CREATE SEQUENCE public.seq_state
+    INCREMENT 1
+    START 1
+    MINVALUE 1
+    MAXVALUE 9223372036854775807
+    CACHE 1;
+
+ALTER SEQUENCE public.seq_state
+    OWNER TO scm;
