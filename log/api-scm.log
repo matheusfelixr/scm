@@ -442,3 +442,37 @@ Caused by: org.flywaydb.core.api.exception.FlywayValidateException: Validate fai
 2021-03-18 01:04:22.056  INFO 3884 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2021-03-18 01:04:22.059  INFO 3884 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2021-03-18 01:04:22.068  INFO 3884 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-03-18 01:11:39.047  INFO 4524 --- [main] com.matheusfelixr.scm.ScmApplication     : Starting ScmApplication using Java 1.8.0_191 on DESKTOP-83GQDVO with PID 4524 (D:\projetos\estudo\git\scm\target\classes started by mathe in D:\projetos\estudo\git\scm)
+2021-03-18 01:11:39.052  INFO 4524 --- [main] com.matheusfelixr.scm.ScmApplication     : The following profiles are active: @activatedProperties@
+2021-03-18 01:11:40.133  INFO 4524 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-03-18 01:11:40.230  INFO 4524 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 86 ms. Found 4 JPA repository interfaces.
+2021-03-18 01:11:40.669  INFO 4524 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@5de5e95' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-18 01:11:40.680  INFO 4524 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-18 01:11:41.297  INFO 4524 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-03-18 01:11:41.310  INFO 4524 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-03-18 01:11:41.311  INFO 4524 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-18 01:11:41.423  INFO 4524 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-03-18 01:11:41.423  INFO 4524 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2301 ms
+2021-03-18 01:11:41.698  INFO 4524 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-03-18 01:11:41.880  INFO 4524 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.28.Final
+2021-03-18 01:11:42.141  INFO 4524 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-03-18 01:11:42.333  INFO 4524 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-03-18 01:11:42.502  INFO 4524 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-03-18 01:11:42.525  INFO 4524 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2021-03-18 01:11:49.860  INFO 10700 --- [main] com.matheusfelixr.scm.ScmApplication     : Starting ScmApplication using Java 1.8.0_191 on DESKTOP-83GQDVO with PID 10700 (D:\projetos\estudo\git\scm\target\classes started by mathe in D:\projetos\estudo\git\scm)
+2021-03-18 01:11:49.863  INFO 10700 --- [main] com.matheusfelixr.scm.ScmApplication     : The following profiles are active: @activatedProperties@
+2021-03-18 01:11:51.270  INFO 10700 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-03-18 01:11:51.356  INFO 10700 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 75 ms. Found 4 JPA repository interfaces.
+2021-03-18 01:11:51.808  INFO 10700 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@551e4c6d' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-18 01:11:51.812  INFO 10700 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-18 01:11:52.506  INFO 10700 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-03-18 01:11:52.519  INFO 10700 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-03-18 01:11:52.520  INFO 10700 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-18 01:11:52.635  INFO 10700 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-03-18 01:11:52.635  INFO 10700 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2691 ms
+2021-03-18 01:11:52.924  INFO 10700 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-03-18 01:11:53.053  INFO 10700 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.28.Final
+2021-03-18 01:11:53.266  INFO 10700 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-03-18 01:11:53.438  INFO 10700 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-03-18 01:11:53.705  INFO 10700 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-03-18 01:11:53.732  INFO 10700 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect

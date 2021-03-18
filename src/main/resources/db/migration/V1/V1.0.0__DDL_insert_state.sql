@@ -6,6 +6,6 @@ INSERT INTO public.state(id,id_ibge, uf) VALUES (5, 29, 'BA');
 INSERT INTO public.state(id,id_ibge, uf) VALUES (6, 23, 'CE');
 INSERT INTO public.state(id,id_ibge, uf) VALUES (7, 53, 'DF');
 INSERT INTO public.state(id,id_ibge, uf) VALUES (8, 32, 'ES');
-52|GO|01012009|
+
 INSERT INTO public.state(id,id_ibge, uf) VALUES (8, 52, 'GO');
 
