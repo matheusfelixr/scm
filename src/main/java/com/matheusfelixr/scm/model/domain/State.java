@@ -18,10 +18,10 @@ public class State implements Serializable {
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "SEQ_STATE")
     private Long id;
 
-    @Column(name = "ID_IBGE", nullable = false)
+    @Column(name = "ID_IBGE", nullable = false, unique = true)
     private String idIbge;
 
-    @Column(name = "UF", nullable = false)
+    @Column(name = "UF", nullable = false, unique = true, length = 2)
     private String uf;
 
 }
