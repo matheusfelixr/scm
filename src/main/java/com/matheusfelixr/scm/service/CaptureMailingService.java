@@ -1,7 +1,8 @@
 package com.matheusfelixr.scm.service;
 
+
 import com.matheusfelixr.scm.model.domain.Company;
-import com.matheusfelixr.scm.model.dto.MessageDTO;
+import com.matheusfelixr.scm.model.dto.captureMailing.ResponseCaptureMailingByExampleDto;
 import com.matheusfelixr.scm.util.CepHelper;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -9,6 +10,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.xml.bind.ValidationException;
@@ -24,8 +26,10 @@ public class CaptureMailingService {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(CaptureMailingService.class);
 
+    @Autowired
+    private CompanyService companyService;
 
-    public MessageDTO captureMailingByExample(String example) throws Exception {
+    public ResponseCaptureMailingByExampleDto captureMailingByExample(String example) throws Exception {
         //Inicialização de variaveis
         List<Company> companies = new ArrayList<>();
         String url = "https://www.google.com/search?tbs=lrf:!1m4!1u3!2m2!3m1!1e1!1m4!1u2!2m2!2m1!1e1!2m1!1e2!2m1!1e3,lf:1,lf_ui:2&tbm=lcl&sxsrf=ALeKk01pgIMS0wVa2kMx6-wP9kYIrLLG0Q:1615496772648&q=empresas#rlfi=hd:;si:;mv:[[-18.8735391,-48.2425554],[-18.9434743,-48.341009400000004]];tbs:lrf:!1m4!1u3!2m2!3m1!1e1!1m4!1u2!2m2!2m1!1e1!2m1!1e2!2m1!1e3,lf:1,lf_ui:2";
@@ -44,29 +48,32 @@ public class CaptureMailingService {
         this.finalizeDriver(driver);
 
         //escrever csv
-        this.printCsv(example, companies);
+        String fileName = this.printCsv(example, companies);
 
-        return new MessageDTO("Sucesso ao realizar import");
+        //salva empresas encontradas
+        this.companyService.saveAll(companies);
+
+        return new ResponseCaptureMailingByExampleDto(fileName);
     }
 
-    private void printCsv(String example, List<Company> companies) throws ValidationException {
+    private String printCsv(String example, List<Company> companies) throws ValidationException {
         try {
             if (companies.isEmpty()) {
                 new ValidationException("Não foram encontrados itens na busca.");
             }
-            String dateFormat = new SimpleDateFormat("yyyy-MM-dd-ss").format(new Date());
-            FileWriter arq = new FileWriter("csv/" + dateFormat + "_RETORNO_PESQUISA_" + example + ".csv");
+            String fileName = new SimpleDateFormat("yyyy-MM-dd-ss").format(new Date()) + "_RETORNO_PESQUISA_" + example + ".csv";
+            FileWriter arq = new FileWriter("csv/" + fileName);
             PrintWriter printWriter = new PrintWriter(arq);
-            printWriter.println("EMPRESA|TELEFONE|CIDADE|ENDEREÇO");
+            printWriter.println("EMPRESA;TELEFONE;ENDEREÇO");
 
             for (Company company : companies) {
-                if (company.getPhone() != null) {
-                    printWriter.println(company.getName() + ";" + company.getPhone() + ";" + company.getCity() + ";" + company.getFullAddress());
+                if (company != null && company.getPhone() != "") {
+                    printWriter.println(company.getName() + ";" + company.getPhone() + ";" + company.getFullAddress());
                 }
             }
 
             arq.close();
-
+            return fileName;
         } catch (Exception e) {
             throw new ValidationException("Erro ao gerar arquivo com informações");
         }
@@ -108,7 +115,13 @@ public class CaptureMailingService {
             List<WebElement> companyBlocks = this.getBlockCompanies(driver);
 
             for (WebElement companyBlock : companyBlocks) {
-                companies.add(getObjectCompany(driver, companyBlock));
+                Company company = getObjectCompany(driver, companyBlock);
+                if(company != null && company.getPhone() != "" && company.getName() != ""){
+                    boolean contains = companies.contains(company);
+                    if(!contains){
+                        companies.add(company);
+                    }
+                }
             }
 
         } catch (Exception e) {
