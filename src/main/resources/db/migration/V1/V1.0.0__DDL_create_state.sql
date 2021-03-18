@@ -1,4 +1,7 @@
-CREATE TABLE state
+
+DROP TABLE public.state;
+
+CREATE TABLE public.state
 (
     id bigint NOT NULL,
     id_ibge character varying(255) COLLATE pg_catalog."default" NOT NULL,
