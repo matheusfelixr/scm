@@ -4,6 +4,8 @@ import lombok.Data;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.List;
+import java.util.Set;
 
 @Data
 @Entity
@@ -19,9 +21,12 @@ public class State implements Serializable {
     private Long id;
 
     @Column(name = "ID_IBGE", nullable = false, unique = true)
-    private String idIbge;
+    private Long idIbge;
 
     @Column(name = "UF", nullable = false, unique = true, length = 2)
     private String uf;
+
+    @OneToMany( fetch = FetchType.LAZY, cascade=CascadeType.ALL, mappedBy="state", orphanRemoval = true)
+    private Set<City> city;
 
 }
